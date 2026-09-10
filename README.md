@@ -4,9 +4,11 @@
 This repository implements the Hiver SDE Intern take-home assignment. It will eventually build and evaluate an AI customer-support agent using the **Customer Support on Twitter** dataset.
 
 ## Current Status
-`Phase 1 — Dataset Ingestion & Validation`
+`Phase 2 — Brand Selected`
 
-Currently, only the data ingestion and schema validation layer is implemented.
+The initial data ingestion and schema validation layer is implemented, and the brands within the TWCS dataset have been profiled. We have finalized the brand selection for the subsequent AI agent workflow.
+
+**Selected Support Account**: `AppleSupport`
 
 ## Dataset
 - **Name:** Customer Support on Twitter
@@ -56,8 +58,14 @@ Findings produced by running the inspection script on a 2-row synthetic sample d
 
 *(Note: Run the inspection script on the full dataset to view the actual Kaggle dataset statistics)*
 
+## Run Phase 2: Brand Profiling
+To generate profiling metrics and candidate comparisons for all support accounts in the dataset:
+```bash
+python scripts/profile_brands.py --data-path data/raw/twcs.csv --output-dir reports
+```
+
 ## Limitations / Next Phase
-Task 1 does not yet:
+The project does not yet:
 - select the final brand;
 - reconstruct complete conversations;
 - define intents;
@@ -66,4 +74,4 @@ Task 1 does not yet:
 - implement escalation;
 - evaluate the final agent.
 
-The next phase is **Brand Selection & Profiling**.
+The next phase is **Phase 2, Step 3: Final Brand Selection**.
