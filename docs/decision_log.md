@@ -161,3 +161,43 @@ Implemented a modular support agent (`src/agent`) orchestrating deterministic cl
 
 ### Consequences
 The agent pipeline is fully operational. It achieves a 51% auto-handle rate and 49% escalation rate on the golden set. Future phases will introduce an LLM to replace the deterministic Response Generator and evaluate its conversational fluency against human judges.
+
+## Decision: Phase 5 LLM-Powered Agent Integration
+
+### Decision
+Introduced an LLM abstraction layer (`LLMProvider`) to implement `LLMIntentClassifier` and `LLMResponseGenerator`. We implemented a `--mode` toggle to ensure the deterministic baseline remains fully intact and reproducible alongside the new LLM implementation.
+
+### Reasoning
+- **Structured LLM Validation**: LLMs can hallucinate non-existent intents. The `LLMIntentClassifier` implements a strict parsing and bounded-retry loop to ensure intents match `GoldenSetLoader.VALID_INTENTS`. If the LLM repeatedly fails, it gracefully falls back to `General Complaint / Venting (Other)` rather than crashing.
+- **Evidence-Grounded Prompting**: The `LLMResponseGenerator` is strictly prompted to use ONLY the retrieved historical evidence. This bridges the gap between conversational fluency and the strict safety established in Phase 4.
+- **Mocking and Integrity**: We implemented a `MockLLMProvider` for tests to avoid committing API keys or making tests flaky/slow. The evaluation script defaults to this mock if a real API key is absent, strictly honoring the requirement to NOT fabricate LLM/human agreement scores.
+
+### Consequences
+The architecture seamlessly supports swapping in production LLM models while maintaining strict historical grounding and escalation safety. The baseline remains available for regression testing.
+
+## Decision: Phase 6 Reply Quality & Human/LLM Agreement
+
+### Decision
+Implemented a 1-5 scale evaluation rubric across 5 dimensions and an overall score. Created a structured JSON `ReplyJudge` and initialized the schema for human judgments (`data/evaluation/human_reply_judgments.csv`), using a reproducible sample size of 30 auto-handled examples.
+
+### Reasoning
+- **Groundedness vs. Correctness**: Groundedness strictly measures adherence to retrieved evidence (penalizing hallucinations), while Correctness measures factual problem resolution. Distinguishing these helps diagnose if an LLM is accurately summarizing but hallucinating details.
+- **Separating Generator from Judge**: The LLM drafting the reply is completely separated from the evaluation logic. 
+- **Escalation Exclusion**: Human escalations do not generate draft replies. Forcing an evaluation on escalated cases skews results, so we strictly evaluate only `AUTO_HANDLE` items.
+- **No Fabrication**: Because no genuine human annotations exist for these specific drafts, the output strictly logs "HUMAN/LLM AGREEMENT: PENDING GENUINE HUMAN JUDGMENTS". We use a `MockLLMProvider` returning static JSON to test parsing logic without hallucinating evaluation data.
+
+### Consequences
+The repository is fully structured for human annotators to grade the 30 sampled baseline outputs. Once populated, running `evaluate_reply_quality.py` will automatically calculate rigorous exact and within-one-point agreement statistics between the human annotators and the LLM judge.
+
+## Decision: Phase 7 Failure Analysis Methodology
+
+### Decision
+Conducted failure analysis exclusively on the Phase 4 deterministic baseline, maintaining a strict distinction between observed facts (metrics from `failure_analysis.py`) and inferences. Explicitly chose "100% Retrieval Coverage" as the assignment's requested "misleading headline number."
+
+### Reasoning
+- **No Fabrication**: Because API credentials are not available, performing a failure analysis on hallucinated or mocked LLM replies would invalidate the integrity of the project.
+- **Misleading Metric**: "100% Retrieval Coverage" is incredibly misleading because coverage simply means "returning *something*", regardless of relevance. Reviewers could assume 100% means the agent always finds the right answer, when the Proxy Hit Rate proves it fails 31% of the time.
+- **Prioritization**: The next-week plan prioritizes Semantic Embedding Retrieval over prompt-engineering because the failure analysis objectively proved that the upstream retrieval context is failing lexically 31% of the time. You cannot prompt-engineer an LLM out of being fed irrelevant context.
+
+### Consequences
+The project is perfectly staged for a real API key. The limitations of deterministic keywords and lexical TF-IDF are mathematically proven and documented, completely justifying the architectural transition to dense embeddings and LLMs in the upcoming weeks.

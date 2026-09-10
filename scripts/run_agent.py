@@ -1,16 +1,29 @@
 import argparse
 import json
 from src.agent.agent import SupportAgent
+from src.agent.llm_provider import MockLLMProvider
+from src.agent.llm_intent import LLMIntentClassifier
+from src.agent.llm_response import LLMResponseGenerator
 
 def main():
     parser = argparse.ArgumentParser(description="Run the AppleSupport Agent Pipeline.")
     parser.add_argument("--message", type=str, required=True, help="Customer message to process.")
     parser.add_argument("--conversation_id", type=str, default=None, help="Optional conversation ID to exclude from retrieval.")
+    parser.add_argument("--mode", type=str, choices=['baseline', 'llm'], default='baseline', help="Execution mode.")
     args = parser.parse_args()
 
-    print("\nLoading Support Agent components...")
-    agent = SupportAgent()
+    print(f"\nLoading Support Agent components (Mode: {args.mode})...")
     
+    if args.mode == 'llm':
+        # Default to Mock provider. Real provider integration goes here when an API key is available.
+        provider = MockLLMProvider()
+        agent = SupportAgent(
+            classifier=LLMIntentClassifier(provider),
+            response_generator=LLMResponseGenerator(provider)
+        )
+    else:
+        agent = SupportAgent()
+        
     print(f"\nProcessing Message: \"{args.message}\"\n")
     
     result = agent.run(

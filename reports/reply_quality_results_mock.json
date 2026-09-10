@@ -1,0 +1,307 @@
+{
+  "sample_size": 30,
+  "judgments": [
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_160"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_033"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_011"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_186"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_070"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_061"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_057"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_038"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_032"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_166"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_142"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_027"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_152"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_117"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_012"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_196"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_178"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_056"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_058"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_134"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_154"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_182"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_144"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_054"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_181"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_114"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_190"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_120"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_192"
+    },
+    {
+      "helpfulness": 5,
+      "correctness": 5,
+      "relevance": 5,
+      "groundedness": 5,
+      "tone": 5,
+      "overall_score": 5,
+      "rationale": "Mocked baseline judgment",
+      "example_id": "GOLDEN_001"
+    }
+  ],
+  "agreement": {},
+  "human_data_present": false
+}

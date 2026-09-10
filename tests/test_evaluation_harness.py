@@ -61,6 +61,13 @@ def test_agreement_metrics():
     assert metrics['mean_absolute_difference'] == (0 + 1 + 2) / 3
 
 def test_reply_judge_interface():
-    judge = ReplyJudge()
-    with pytest.raises(NotImplementedError):
-        judge.evaluate("msg", "ctx", "reply")
+    from src.agent.llm_provider import MockLLMProvider
+    provider = MockLLMProvider({"response": '{"helpfulness": 5, "correctness": 5, "relevance": 5, "groundedness": 5, "tone": 5, "overall_score": 5, "rationale": "Mock"}'})
+    judge = ReplyJudge(provider)
+    result = judge.evaluate(
+        customer_message="msg", 
+        conversation_context="ctx", 
+        draft_reply="reply", 
+        predicted_intent="intent"
+    )
+    assert result["overall_score"] == 5

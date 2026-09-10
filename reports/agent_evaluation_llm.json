@@ -1,0 +1,2012 @@
+{
+  "metrics": {
+    "intent_accuracy": 0.345,
+    "intent_macro_f1": 0.08550185873605948,
+    "retrieval_coverage": 1.0,
+    "proxy_hit_rate": 0.345,
+    "auto_handle_rate": 1.0,
+    "escalation_rate": 0.0
+  },
+  "examples": [
+    {
+      "example_id": "GOLDEN_001",
+      "customer_message": "@AppleSupport how long until you fix the keyboard issues with the autocorrecting of letters?",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4987748185405816
+    },
+    {
+      "example_id": "GOLDEN_002",
+      "customer_message": "@AppleSupport you seem to be skipping the step that allows to select which carrier phone to get for iPhone X upgrade head start. Why?",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4003967051558769
+    },
+    {
+      "example_id": "GOLDEN_003",
+      "customer_message": "Bruhhhh I\u2019m so fuckin tired @AppleSupport @115858 fixed these damn glitches ! Keep cutting my phone off",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3642500738319536
+    },
+    {
+      "example_id": "GOLDEN_004",
+      "customer_message": "What is this \u201cA\u201d and \u00a0QUESTION MARK THAT MY PHONE KEEPS DOING!! @115858 @AppleSupport",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6986084319731432
+    },
+    {
+      "example_id": "GOLDEN_005",
+      "customer_message": "@AppleSupport any way to actually talk to a store? I've tried 0117 959 7600 (Bristol) and just end up back with AppleCare or Sales each time",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3276159865473032
+    },
+    {
+      "example_id": "GOLDEN_006",
+      "customer_message": "WHY IS THE LETTER I SHOWING UP AS A QUESTION MARK IN A BOX ? @115858 FIX IT",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.9071578274999328
+    },
+    {
+      "example_id": "GOLDEN_007",
+      "customer_message": "@AppleSupport trying to setup HomeKit automation for when multiple people leave home but it says to upgrade my hub -an Apple TV w tvOS 11.1 https\\\\://t.co/IXpgmAi9vc",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5253916992624421
+    },
+    {
+      "example_id": "GOLDEN_008",
+      "customer_message": "Love how my $1200 @115858 iPhone X constantly freezes when using apps like YouTube and Apple Music. Wtf",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4020923334221983
+    },
+    {
+      "example_id": "GOLDEN_009",
+      "customer_message": "Aye @115858 y\u2019all are gonna need to send another update. Every time I\ufe0f type an \u201cI\ufe0f\u201d it ends up looking like this \ud83d\ude12 https\\\\://t.co/zqG2JxPR3V",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5186863631187277
+    },
+    {
+      "example_id": "GOLDEN_010",
+      "customer_message": "@AppleSupport with iOS11 my phone won\u2019t show my music on my lock screen and when I receive calls I can\u2019t hear anything on the other end help",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6162022876213107
+    },
+    {
+      "example_id": "GOLDEN_011",
+      "customer_message": "@AppleSupport \u00a0I updated to iOS 11.0.3 on my 6s plus &amp; I just went from 85% to 13% in an hour after watching two YouTube videos. :/",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4098527746383747
+    },
+    {
+      "example_id": "GOLDEN_012",
+      "customer_message": "@AppleSupport Since updating to iOS 11 I\u2019m not receiving text alerts on my watch now yet I receive them for WhatsApp &amp; calls \ud83d\ude24",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4601831604344002
+    },
+    {
+      "example_id": "GOLDEN_013",
+      "customer_message": "@AppleSupport my iPhone 7 Plus keeps freezing, please send help",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.8277937062202476
+    },
+    {
+      "example_id": "GOLDEN_014",
+      "customer_message": "@AppleSupport Any idea when the @ATT activation servers will stop shitting themselves, or do I keep mashing Try Again &amp; hope? #iphoneXlaunch",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.38456444154035224
+    },
+    {
+      "example_id": "GOLDEN_015",
+      "customer_message": "Theres isnt a day where @115948 dont kill me with frustration! Cant do the simplest things like.. play music! Without skipping tracks!",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3014806815321217
+    },
+    {
+      "example_id": "GOLDEN_016",
+      "customer_message": "@AppleSupport is it just me, or are there issues with iTunes the last few days? \u00a0Mine keeps freezing up... \u00a0No update available.",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5040135245522194
+    },
+    {
+      "example_id": "GOLDEN_017",
+      "customer_message": "@AppleSupport what password is this referring to? It will not accept my iCloud, computer, or phone password https\\\\://t.co/tcZVKRuynn",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6923922410602161
+    },
+    {
+      "example_id": "GOLDEN_018",
+      "customer_message": "I want ios 10 back on my device how can i get that plz help me @115858 the Battery life is worse than i expected i m using 6s",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4383619469279625
+    },
+    {
+      "example_id": "GOLDEN_019",
+      "customer_message": "@AppleSupport literally cannot figure out how to delete a movie off my phone for the life of me since the new update.",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.40926767330947034
+    },
+    {
+      "example_id": "GOLDEN_020",
+      "customer_message": "@AppleSupport ever since I updated my iPhone 6 to iOS 11.1 (currently at 11.1.2) my battery life is terrible. \u00a0I lose 10%/hr with the phone locked and in \u201clow power\u201d mode. \u00a0Support told me it is a known issue with iOS 11.1 When will it be fixed?",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5082103157077748
+    },
+    {
+      "example_id": "GOLDEN_021",
+      "customer_message": "I upgraded my phone to iOS11. I had 3GB of storage free. Business as usual and now I am out of storage space. What gives? @AppleSupport",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.501716618574785
+    },
+    {
+      "example_id": "GOLDEN_022",
+      "customer_message": "@AppleSupport um hi my iphone SE keeps restarting. It's been doing it all day and I have no idea why. Can you provide any advice? Thanks.",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.41117082099711816
+    },
+    {
+      "example_id": "GOLDEN_023",
+      "customer_message": "@AppleSupport why do my notifications not have a complete background? Just updated last night but happening since new iOS. https\\\\://t.co/yiLJ9Hh8US",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4614975979997795
+    },
+    {
+      "example_id": "GOLDEN_024",
+      "customer_message": "I\u2019ve never experienced so much glitches in my phone since updating to the new iOS \ud83d\ude24\ud83d\ude24 @115858 @AppleSupport",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.615583843045117
+    },
+    {
+      "example_id": "GOLDEN_025",
+      "customer_message": "@AppleSupport y\u2019all got me fucked up my X be blacking out and hanging up calls on FaceTime out of no where",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.48427219571546987
+    },
+    {
+      "example_id": "GOLDEN_026",
+      "customer_message": "@AppleSupport what's happening to my computer? https\\\\://t.co/HoqpCrRejO",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7876327866744811
+    },
+    {
+      "example_id": "GOLDEN_027",
+      "customer_message": "@115858 love when all the convenience of the iPad Pro for art is killed in one update #iOS11sucks",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3676539662202951
+    },
+    {
+      "example_id": "GOLDEN_028",
+      "customer_message": "Hey @AppleSupport is this a known bug that will be fixed soon? My dock on iPad continues to not stay centered and only a reboot will reset it. \u00a0See attached picture. https\\\\://t.co/d0U1mmK6C1",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.36928677452714864
+    },
+    {
+      "example_id": "GOLDEN_029",
+      "customer_message": "Yo @AppleSupport can you make this shit stop, please. https\\\\://t.co/s9ZyLpqJg5",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.782796243135092
+    },
+    {
+      "example_id": "GOLDEN_030",
+      "customer_message": "Fucking @115858 have locked me out of my iTunes account and won\u2019t get me details to get back in. @118721 @AppleSupport 4 Days you said and that was last Friday. \ud83d\ude21\ud83d\ude21",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3792689005585106
+    },
+    {
+      "example_id": "GOLDEN_031",
+      "customer_message": "I updated my phone &amp; I'm still seeing ? boxes @AppleSupport https\\\\://t.co/MFe5qaGuVT",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.9423108815933844
+    },
+    {
+      "example_id": "GOLDEN_032",
+      "customer_message": "Updated to iOS 11 and my phone is soo slow with technical glitches. Like WTF?!? \u00a0 @AppleSupport @115858 \u00a0Upgrade is supposed to be better!!!",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4333629066733307
+    },
+    {
+      "example_id": "GOLDEN_033",
+      "customer_message": "i love having an iphone because when i update the iOS, my battery goes from draining 1% every 10 minutes to draining 10% every 10 minutes.",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6742540047912556
+    },
+    {
+      "example_id": "GOLDEN_034",
+      "customer_message": "thanks for the new iphone update @115858 my fav feature is how my phone freezes up on me like five times a day",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.470568032085386
+    },
+    {
+      "example_id": "GOLDEN_035",
+      "customer_message": "@115858 @AppleSupport My new #iPhoneX shows a green line on it\u2019s display just on it\u2019s third day! HELP OUT https\\\\://t.co/cTtbFTyaaX",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5725487651328061
+    },
+    {
+      "example_id": "GOLDEN_036",
+      "customer_message": "Anyone else think major govt will yhink that the internet is a mistake for citizens so decide to wipe us all out and re-create a limited internet?",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3758355910278318
+    },
+    {
+      "example_id": "GOLDEN_037",
+      "customer_message": "@115858 I\u2019m gonna need you to fix all the glitches u put on my phone from iOS 11 thank u",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6220318294552352
+    },
+    {
+      "example_id": "GOLDEN_038",
+      "customer_message": "Am I missing something @AppleSupport on my iPhone X? Is there a way to have FaceID approve family sharing app requests for my kids? Typing passwords is so Iphone 5 \ud83d\ude00",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5190108664214426
+    },
+    {
+      "example_id": "GOLDEN_039",
+      "customer_message": "@115858 you\u2019re not about to make me \u00a0 switch to iPhone 8. Better fix this glitch. You all aren\u2019t slick. https\\\\://t.co/lJkkeNSr3M",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5228315261358898
+    },
+    {
+      "example_id": "GOLDEN_040",
+      "customer_message": "my phone still has that annoying question mark glitch even though I updated it, @115858 wyd",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.592564109266555
+    },
+    {
+      "example_id": "GOLDEN_041",
+      "customer_message": "So are y\u2019all going to fix our keyboard issue? This should be a piece of cake for y\u2019all @115858",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5002807415128829
+    },
+    {
+      "example_id": "GOLDEN_042",
+      "customer_message": "@AppleSupport my iPad Air 2 battery meter seems to be glitchy. Says I have low power &amp; when I plug it in jumps up by anything up to 20%. Sometimes it goes from 20% to 5% in second or like now on 3% for well over an hour of use including on YouTube. Software or hardware issue? https\\\\://t.co/iRaPBgK7Ha",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.34558483097210674
+    },
+    {
+      "example_id": "GOLDEN_043",
+      "customer_message": "@AppleSupport fix this. i can\u2019t handle this anarchy anymore. https\\\\://t.co/2wMm0ZGCTd",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7787845705672305
+    },
+    {
+      "example_id": "GOLDEN_044",
+      "customer_message": "@AppleSupport \u00a0@170480 @115858 \u00a0iphone 5s cihazlar\u0131n onar\u0131m\u0131n\u0131 m\u0131 yoksa cihaz\u0131 degistiriyorsunuz \u00a0cihaz \u015farj alm\u0131yor",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.45854943159291217
+    },
+    {
+      "example_id": "GOLDEN_045",
+      "customer_message": "what happen to find my iphone on icloud site ?@AppleSupport",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5555512499452652
+    },
+    {
+      "example_id": "GOLDEN_046",
+      "customer_message": "@115858 you're really making it hard to not switch to #Android with your poorly tested iOS updates #voluntaryrestart #\ud83e\udd2c https\\\\://t.co/0K4jpbJJp1",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.39048075497797763
+    },
+    {
+      "example_id": "GOLDEN_047",
+      "customer_message": ". @AppleSupport hey when I\ufe0f type the letter \"I\" it changes to I\ufe0f can you tell me what to do!? I\ufe0f just want to say I\ufe0f not iAnbh",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5736190905520417
+    },
+    {
+      "example_id": "GOLDEN_048",
+      "customer_message": "I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f Hey @115858. Hi!",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7225562811867496
+    },
+    {
+      "example_id": "GOLDEN_049",
+      "customer_message": "I UPDATED MY PHONE AND THIS STUPID WEIRD SHORTCUT WITH MY \u201cI\u201d STILL KEEPS HAPPENING WTF @AppleSupport",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5421870150148609
+    },
+    {
+      "example_id": "GOLDEN_050",
+      "customer_message": "@applesupport Can you help me check my iPhone 7\u2019s battery capacity? It is running down in as little as 3 hours of minimal use.",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6249159520274287
+    },
+    {
+      "example_id": "GOLDEN_051",
+      "customer_message": "@AppleSupport want to explain how with half an hour after being on 100% I\u2019m now on less than half that? #ios11 #iPhoneUpdate https\\\\://t.co/fNYqEWuL76",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.49608555262905946
+    },
+    {
+      "example_id": "GOLDEN_052",
+      "customer_message": "@AppleSupport WHY DOES MY IPHONE 7 KEEP FREEZING \ud83e\udd26\ud83c\udffb\u200d\u2642\ufe0f",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0
+    },
+    {
+      "example_id": "GOLDEN_053",
+      "customer_message": "@AppleSupport why dont old videos on my phone play? They show a buffering type circle ... very annoying",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4435956221617347
+    },
+    {
+      "example_id": "GOLDEN_054",
+      "customer_message": "@115858 iOS 11.0.3 lecturing me about non-genuine parts\u2026 B please, I have a new iPhone 7 and it\u2019s not responding to touch either. Morons.",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5026953397702276
+    },
+    {
+      "example_id": "GOLDEN_055",
+      "customer_message": "@AppleSupport \u00a0iPhone 7 battery is draining rapidly with iOS 11.1.2 update!!! Are their any solutions for this problem?",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7364781732518731
+    },
+    {
+      "example_id": "GOLDEN_056",
+      "customer_message": "@116333 @AppleSupport PLEASE: add a dedicated podcast app to Apple Watch. Forcing us to remain tethered to phone = watch is useless",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4131619900094563
+    },
+    {
+      "example_id": "GOLDEN_057",
+      "customer_message": "@AppleSupport the new IOS update is dreadful, so many bugs. Sort it out lads",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5073617650244947
+    },
+    {
+      "example_id": "GOLDEN_058",
+      "customer_message": "Love having to hard reboot my iPhone because of a frickin' bug with Control Center that renders the whole UI unresponsive. Good QA, @115858.",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3067018631094166
+    },
+    {
+      "example_id": "GOLDEN_059",
+      "customer_message": "@115858 help! https\\\\://t.co/X1GpgTQk8p",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0000000000000002
+    },
+    {
+      "example_id": "GOLDEN_060",
+      "customer_message": "@AppleSupport @115858 Apple! What have you guys done w \u00a0IOS 11? I was so happy with 10. Phone is so slow :(",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5642557865702383
+    },
+    {
+      "example_id": "GOLDEN_061",
+      "customer_message": "@116333 phones charge port broke and now is making me miss an amazing job opportunity I could have had, thanks Apple",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.413138320297746
+    },
+    {
+      "example_id": "GOLDEN_062",
+      "customer_message": "@applesupport Hi there - iphone 5 just stopped connecting to imessage. Turned off/on, rebooted, reset network settings - you name it - I tried it. Activation error. Don't get any messages from people with an iphone (it's not recognizing to switch to SMS). Any ideas? Thanks.",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3568242795459331
+    },
+    {
+      "example_id": "GOLDEN_063",
+      "customer_message": "Whatever y\u2019all did with this recent update FIX IT, TODAY. It\u2019s so much going wrong \ud83d\ude21 @115858 @AppleSupport",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5476050444088051
+    },
+    {
+      "example_id": "GOLDEN_064",
+      "customer_message": "After updating to #ios11, I accidentally changed wallpaper. While trying to set the original back (see image), it has disappeared suddenly. Where do I find the beautiful wallpapers of ios 10? @AppleSupport https\\\\://t.co/zPKsqH5bWz",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4036414547506485
+    },
+    {
+      "example_id": "GOLDEN_065",
+      "customer_message": "what the actual fuck why can\u2019t i\ufe0f send the letter fucking i\ufe0f @115858",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6795580779327466
+    },
+    {
+      "example_id": "GOLDEN_066",
+      "customer_message": "@115858 when I delete voice mails they pop back in... why? I just updated last night.",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.429932067736477
+    },
+    {
+      "example_id": "GOLDEN_067",
+      "customer_message": "WHAT IS HAPPENING WHY ARE MY CONTACTS ALL MISSING I JUST UPDATED TO 11.1.1 HELLOOOO I NEED HELP @115858",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4771194257896764
+    },
+    {
+      "example_id": "GOLDEN_068",
+      "customer_message": "Hey @AppleSupport if I have the first Apple Watch wich I paid 1000 usd for the space gray black link bracelet 42 mm is there a way to trade in for the new one.",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.2855695904369586
+    },
+    {
+      "example_id": "GOLDEN_069",
+      "customer_message": "Anyone else lose all their valuable Notes after iOS upgrade? No, just me? @AppleSupport",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5367582741576769
+    },
+    {
+      "example_id": "GOLDEN_070",
+      "customer_message": "Yo @AppleSupport are you just not going to fix this glitch with the letter i? It\u2019s been like 3 days this is ridiculous.",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6123836356588748
+    },
+    {
+      "example_id": "GOLDEN_071",
+      "customer_message": "@AppleSupport just updated and now my imusic has completely gone to shit. Cant even get it to open.",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.48017843032044394
+    },
+    {
+      "example_id": "GOLDEN_072",
+      "customer_message": "@AppleSupport Has using an \u2018 always caused the character limit in a text message to drop from 160 to 70? Or is that a bug? ;\\\\\\~;",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.35585615845093665
+    },
+    {
+      "example_id": "GOLDEN_073",
+      "customer_message": "@115858 fix this I\ufe0f shit",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0
+    },
+    {
+      "example_id": "GOLDEN_074",
+      "customer_message": "@115858 New #iPhoneX #iOS 11.1 #Bug: Screen flickers in Mail App - probably software bug. @175600 @138069 @176071 @244902 @24575 https\\\\://t.co/f0DivXcTCj",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3680280209046244
+    },
+    {
+      "example_id": "GOLDEN_075",
+      "customer_message": "@AppleSupport My Guest Account is still appearing even \u00a0though it is turned off in Users &amp; Groups. https\\\\://t.co/IO8o1sx5w8",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5396497226176893
+    },
+    {
+      "example_id": "GOLDEN_076",
+      "customer_message": "Seriously wtf @AppleSupport https\\\\://t.co/2PXGjBhJ4K",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.95749465200058
+    },
+    {
+      "example_id": "GOLDEN_077",
+      "customer_message": "Encore rat\u00e9 #UPS. D\u00e9cid\u00e9ment je n'ai pas de chance. Ils d\u00e9posent un avis de passage et n'ont m\u00eame pas appuy\u00e9 sur ma sonnette. Comme c'est la 3e fois que \u00e7a m'arrive avec UPS, il me semble important d'en parler ici. Merci @AppleSupport et merci @UPSHelp de votre aide.",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.35626517891979737
+    },
+    {
+      "example_id": "GOLDEN_078",
+      "customer_message": ".\\\\@115858 your earpods are poppin' in my ear \ud83d\ude24\ud83d\ude35\ud83d\ude30\ud83e\udd14",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4950541214172156
+    },
+    {
+      "example_id": "GOLDEN_079",
+      "customer_message": "@115858 release a new phone &amp; my current phone starts to become very slow &amp; buggy overnight...",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.41465284407209596
+    },
+    {
+      "example_id": "GOLDEN_080",
+      "customer_message": "Wow @AppleSupport been waiting for 40 minutes now trying to resolve an issue on a hack.",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.44697721641094484
+    },
+    {
+      "example_id": "GOLDEN_081",
+      "customer_message": "@AppleSupport any idea why the numerical display doesn\u2019t match the hour hand? https\\\\://t.co/RhM5plFK2A",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3251104265287042
+    },
+    {
+      "example_id": "GOLDEN_082",
+      "customer_message": "@115858 u tellin me that if u turn off your device and it\u2019s on the charger it doesn\u2019t charge anymore \ud83d\ude2d\ud83e\udd26\ud83c\udffb\u200d\u2640\ufe0f\ud83e\udd26\ud83c\udffb\u200d\u2640\ufe0f\ud83e\udd26\ud83c\udffb\u200d\u2640\ufe0f\ud83e\udd26\ud83c\udffb\u200d\u2640\ufe0f\ud83e\udd26\ud83c\udffb\u200d\u2640\ufe0f\ud83e\udd26\ud83c\udffb\u200d\u2640\ufe0f\ud83e\udd26\ud83c\udffb\u200d\u2640\ufe0f i have been charging my ipad for 2 hours and i turned it off at 30 % JUST turned it back on and it\u2019s at 37 \ud83d\ude2d",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4694517989610184
+    },
+    {
+      "example_id": "GOLDEN_083",
+      "customer_message": "@AppleSupport i got my reservation number but https\\\\://t.co/jUaGGTUlU2 keeps on saying cant find reservation. Whats the deal??! \u00a0 \u00a0 \u00a0 iphonex",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5986223991402044
+    },
+    {
+      "example_id": "GOLDEN_084",
+      "customer_message": "hey @115858, i\ufe0f think we have a problem",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0000000000000002
+    },
+    {
+      "example_id": "GOLDEN_085",
+      "customer_message": "Can I update my #iOS to 11.0.3 now or are there still problems? #Apple #iPhone #iOS1103 @AppleSupport",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6807678539659167
+    },
+    {
+      "example_id": "GOLDEN_086",
+      "customer_message": "@AppleSupport Can you guys help me with a problem I\u2019m having with my AirPods",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6157661253280032
+    },
+    {
+      "example_id": "GOLDEN_087",
+      "customer_message": "@115858 hello there called apple hotline and asked me to backup and erase my iphone. After restoring, I can't log onto iCloud.. can someone help?",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.40854078070514904
+    },
+    {
+      "example_id": "GOLDEN_088",
+      "customer_message": "@558197 I\ufe0f lied my shit is all fucked up but there\u2019s a new update to 11.1 to supposedly fix it",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4949874846402713
+    },
+    {
+      "example_id": "GOLDEN_089",
+      "customer_message": "@AppleSupport Hi.. would be a problem if I have connected Apple car (via cable) and iPhone X on the wireless charger on my car at same time?",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.49738277216341775
+    },
+    {
+      "example_id": "GOLDEN_090",
+      "customer_message": "New iOS update keeps turning on my bluetooth. I\u2019ve never connected my phone using BT ever. Explanation @AppleSupport ??",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4952323543967416
+    },
+    {
+      "example_id": "GOLDEN_091",
+      "customer_message": "Hey @115858 \u00a0 Whatever infected update you sent out just so we would all go buy a new iPhone is really pissing me off. Stop your bullshit. This is all that happens now. From the MOMENT I updated my goddamn phone. https\\\\://t.co/OaJs5CoQoq",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3786704996354812
+    },
+    {
+      "example_id": "GOLDEN_092",
+      "customer_message": "@AppleSupport explain this https\\\\://t.co/l3d7kWscKw",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0000000000000002
+    },
+    {
+      "example_id": "GOLDEN_093",
+      "customer_message": "@115858 uhm your latest Update on iPhone (for me a 6) seriously sucks ass!! My phone is slow, doesnt react, eats the battery \ud83d\ude12 https\\\\://t.co/KxRY3LeS39",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3763631044780915
+    },
+    {
+      "example_id": "GOLDEN_094",
+      "customer_message": "@115858 @AppleSupport Siri has gotten worse not better with new update. She gets everything wrong... even setting timers! What happened?!",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.48799087819954984
+    },
+    {
+      "example_id": "GOLDEN_095",
+      "customer_message": "@AppleSupport IM FUCKING TIRED OF YALL BS . I been a loyal customer since 4th grade . YALL NEED TO MAKE BETTER CHARGERS BCZ THE SHIT IS \ud83d\udc4e\ud83c\udffe. ALSO MY PHONE BE TRIPPING LIKE A MF\u2019 . SIS YALL GOTTA DO BETTER . YALL GOT ONE MORE TIME TO MAKE MY PHONE CRASH AND IM REPORTIN YALL \ud83d\ude18",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5889090458418839
+    },
+    {
+      "example_id": "GOLDEN_096",
+      "customer_message": "I asked 4 different members of staff in the @115858 store, what I needed to buy to be able to quick charge my iPhone 8 Plus, and non of them knew \ud83e\udd14?",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.32398834843808005
+    },
+    {
+      "example_id": "GOLDEN_097",
+      "customer_message": "Is @115858 going to fix this box and exclamation mark issue or what?",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7568519776285683
+    },
+    {
+      "example_id": "GOLDEN_098",
+      "customer_message": "Officially stayed up to watch the clock turn back to 1am and now it\u2019s time for sleep",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.30461494389742005
+    },
+    {
+      "example_id": "GOLDEN_099",
+      "customer_message": "@115858 this new updat3 ( 11.1 ) MURDERS my battery. When will you guys get an update right? Why do \u00a0you fix one problem, and create 50 more?",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5004998593518339
+    },
+    {
+      "example_id": "GOLDEN_100",
+      "customer_message": "Omg! @115858 is making my life fucking miserable right now. What do I pay so much for your shitty products? Can\u2019t even work together, buggy \ud83d\ude21",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.39084943329833455
+    },
+    {
+      "example_id": "GOLDEN_101",
+      "customer_message": "In the last 24 hours I\u2019ve had songs on playlists removed from my downloads and now full albums after updating phone, what gives @115858 \ud83d\ude21",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3887741193607306
+    },
+    {
+      "example_id": "GOLDEN_102",
+      "customer_message": "@115858 @AppleSupport just got hung up on after 15 minutes on hold. i was just trying to get a price for a damn battery replacement \ud83e\udd2c\ud83e\udd2c\ud83e\udd2c",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.49913275362775805
+    },
+    {
+      "example_id": "GOLDEN_103",
+      "customer_message": "@AppleSupport PLEASE FIX THIS ANNOYING ASS GLITCH!! https\\\\://t.co/yctquiqRYI",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7996085443227822
+    },
+    {
+      "example_id": "GOLDEN_104",
+      "customer_message": "@AppleSupport me help",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0
+    },
+    {
+      "example_id": "GOLDEN_105",
+      "customer_message": "It should now be called I\ufe0fphone since they can\u2019t fix it @115858",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.624755501555863
+    },
+    {
+      "example_id": "GOLDEN_106",
+      "customer_message": "@AppleSupport Hi is the server down? Can't log in due to can't connect to server",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7662191145872028
+    },
+    {
+      "example_id": "GOLDEN_107",
+      "customer_message": "My iPad is the slowest thing ever since I update the ios @115858 what the hell",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5572650883220528
+    },
+    {
+      "example_id": "GOLDEN_108",
+      "customer_message": "@AppleSupport \u00a0I bought Mac OS X 10.8 Mountain Lion when i get the code to redeem i notice that I bought \u00a0 Mac OS X 10.7 Lion which already I have . \u00a0Can you please change it to 10.8 ?",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6202072681903803
+    },
+    {
+      "example_id": "GOLDEN_109",
+      "customer_message": "@AppleSupport how is my phone losing battery power while it\u2019s plugged into the wall (says charging) &amp; on low power mode????",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5778279431323741
+    },
+    {
+      "example_id": "GOLDEN_110",
+      "customer_message": "@115858 fix this \u2018I\u2019 bullshit. Plz",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7523066450389564
+    },
+    {
+      "example_id": "GOLDEN_111",
+      "customer_message": "Thank you! @35066 @116333 https\\\\://t.co/Je053NGwvC",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7220852117061408
+    },
+    {
+      "example_id": "GOLDEN_112",
+      "customer_message": "@AppleSupport my phone seems to get more and More messed up. Not only is address book synch a drama, now text even getting worse than it was... https\\\\://t.co/8IOSl27SUm",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.35186932445400065
+    },
+    {
+      "example_id": "GOLDEN_113",
+      "customer_message": "@AppleSupport \u00a0@115858 \u00a0just got my iPhone X and the activation server is failing. I've had every iPhone to the X and this is a first. Help?",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.8218200602507586
+    },
+    {
+      "example_id": "GOLDEN_114",
+      "customer_message": "Wish that @AppleSupport would fix the ringtones issue. I have numerous customized ringtones that won't work in #iOS11. Annoying.",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5853313607045746
+    },
+    {
+      "example_id": "GOLDEN_115",
+      "customer_message": "@AppleSupport hi my laptop has been doing this for over 12 hours and i can\u2019t shut it down or anything, any suggestions ? https\\\\://t.co/X8Aq8qgLWm",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5459520070035273
+    },
+    {
+      "example_id": "GOLDEN_116",
+      "customer_message": "@AppleSupport my brothers iPhone 5 has stopped working. Connected to iTunes for update. As soon as it finished it switched off and won\u2019t turn back on even on the charger. Any help?",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3655145756946197
+    },
+    {
+      "example_id": "GOLDEN_117",
+      "customer_message": "@AppleSupport How many times will it take for my MBP screen to be repaired correctly going on my 3rd DOA display in 2weeks",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4609635409238186
+    },
+    {
+      "example_id": "GOLDEN_118",
+      "customer_message": "@115858 why does my iphone battery gets sucked off dry very quickly ?",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4540931129978889
+    },
+    {
+      "example_id": "GOLDEN_119",
+      "customer_message": "@AppleSupport this apple update has turned my phone into a dumb phone...Siri just calls random people",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4795439950491493
+    },
+    {
+      "example_id": "GOLDEN_120",
+      "customer_message": "@115858 y'all gotta release a new update soon bc my phone is beyond acting up",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.49976974465478946
+    },
+    {
+      "example_id": "GOLDEN_121",
+      "customer_message": "@AppleSupport I've had a very strange email about an invoice? I haven't even got an apple id",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.47841182607242944
+    },
+    {
+      "example_id": "GOLDEN_122",
+      "customer_message": "What\u2019s up with the iphone7 speaker working when it wants? @115858 I lost a priceless voice memo because my speaker didn\u2019t record the sound",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.47258827738788733
+    },
+    {
+      "example_id": "GOLDEN_123",
+      "customer_message": "man am I regretting updating to #HighSierra .. tons of major issues. @AppleSupport @115858 ya'll are really slipping with QA",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.42593271951230033
+    },
+    {
+      "example_id": "GOLDEN_124",
+      "customer_message": "Hey @AppleSupport ... Why is \"System\" taking up over 50gb of my hard disk space? Surely MacOS isn't that big? https\\\\://t.co/UbTJbdeoRm",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3584238240245178
+    },
+    {
+      "example_id": "GOLDEN_125",
+      "customer_message": "Anyone else having icons disappear on iOS 11.1.2? Very annoying! @115858",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5884829400434461
+    },
+    {
+      "example_id": "GOLDEN_126",
+      "customer_message": "@AppleSupport hi i have an issue with my iPhone- it was work then i called apple after that it doesn't work ....they we can do nothing",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6526380770391575
+    },
+    {
+      "example_id": "GOLDEN_127",
+      "customer_message": "\u0645\u0634\u0643\u0644\u0629 \u0627\u0644\u0628\u0637\u0627\u0631\u064a\u0629 \u0641\u064a #ios11 \u0645\u0633\u062a\u0645\u0631\u0629 \u0648\u0627\u0644\u0622\u0646 \u0648\u0635\u0644\u062a \u0627\u0644\u0649 iphone 8 plus \u0645\u0639 \u0627\u0644\u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0623\u062e\u064a\u0631 11.0.2 !! \u00a0https\\\\://t.co/eVoFgOeN2B @AppleSupport #WTF",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3487631276878048
+    },
+    {
+      "example_id": "GOLDEN_128",
+      "customer_message": "\u0668 \u0634\u0647\u0648\u0631 \u0648\u0644\u0633\u0627 \u0628\u0635\u0645\u0647 \u0627\u064a\u062f\u0643 \u0639\u0644\u064a \u0645\u0648\u0628\u0627\u064a\u0644\u064a\ud83d\ude42. https\\\\://t.co/VWGqTZn7R9",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0
+    },
+    {
+      "example_id": "GOLDEN_129",
+      "customer_message": "My phone keeps freezing \ud83d\ude21 @AppleSupport @115858 fix it",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.8433810796717566
+    },
+    {
+      "example_id": "GOLDEN_130",
+      "customer_message": "Why is this always happening @115858 #iphonex https\\\\://t.co/ddCQXId5U4",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7476468071148709
+    },
+    {
+      "example_id": "GOLDEN_131",
+      "customer_message": "I guess @115858 is just gonna keep axing like this I\ufe0f situation isn\u2019t going on? #Update",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5758057418216378
+    },
+    {
+      "example_id": "GOLDEN_132",
+      "customer_message": "Thanks for thrashing my battery with your new bullshit update. Get your shit together @115858",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7064722642536494
+    },
+    {
+      "example_id": "GOLDEN_133",
+      "customer_message": "Hello @115858 \u00a0My iphone 6s battery is draining very fast even on stand by. I have the latet ios 11.1 running in the phone. Can you help me?",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.680140379329796
+    },
+    {
+      "example_id": "GOLDEN_134",
+      "customer_message": "@AppleSupport updated 11.0.2 and now my phone is freezing up and screen rotation sticking in landscape mode!!!!",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4927490591523658
+    },
+    {
+      "example_id": "GOLDEN_135",
+      "customer_message": "hi, If you dont have the ability and quality of developing ios so please don't do it!! None of my photos or videos that I took with last version are not loading clarity. \u00a0The phone crashes at least 2 times every day. This is unbearable @AppleSupport https\\\\://t.co/3uClpasA2L",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.350210334198202
+    },
+    {
+      "example_id": "GOLDEN_136",
+      "customer_message": "Apple also needs to fix how my music stops playing when I get a notification. I\u2019m so annoyed. Y\u2019all fucked up. @115858",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7062763541573658
+    },
+    {
+      "example_id": "GOLDEN_137",
+      "customer_message": "Why are @115858 @AppleSupport taking so long to unlock my phone from @121122 ? Or is it Vodaphones fault whatever the case - I'm phone-less until they sort themselves out \ud83d\ude21\ud83d\ude21",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4180155900123833
+    },
+    {
+      "example_id": "GOLDEN_138",
+      "customer_message": "@AppleSupport ya\u2019ll need to fix my damn phone cuz IOS 11 made my phone shitty",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4650532098324093
+    },
+    {
+      "example_id": "GOLDEN_139",
+      "customer_message": "@AppleSupport @115858 can you get yourselves together and fix the \u201ci\u201d glitch please??? it\u2019s taking over every app i have on my phone.",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6299853585747339
+    },
+    {
+      "example_id": "GOLDEN_140",
+      "customer_message": "@AppleSupport when I turn off airplane mode , suddenly WiFi and Bluetooth turn on. https\\\\://t.co/ajymNO2gjW",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7709542148387053
+    },
+    {
+      "example_id": "GOLDEN_141",
+      "customer_message": "@70441 you mentioned getting a weird symbol when you typed the letter \u201c I\ufe0f \u201c well I\ufe0f am getting it now as well! @AppleSupport HELP!",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5448813346732755
+    },
+    {
+      "example_id": "GOLDEN_142",
+      "customer_message": "With this new OS update the failure rate for sending messages has increased. Enjoy the ability of missing messages @115858",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4080141696934548
+    },
+    {
+      "example_id": "GOLDEN_143",
+      "customer_message": "I can\u2019t stand how fast this bullshit 7+ battery dies.... @115858",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6011031831635939
+    },
+    {
+      "example_id": "GOLDEN_144",
+      "customer_message": "@AppleSupport Dear Team, I am using I phone 6s , I have update latest os 11 but faced lot of problems, Hanging on call history. Kindly check",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4583223848560517
+    },
+    {
+      "example_id": "GOLDEN_145",
+      "customer_message": "Hey @AppleSupport thanks for forcing me to update my phone then have it crash every 6 seconds \ud83d\udc4d\ud83c\udffb",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5536474216623849
+    },
+    {
+      "example_id": "GOLDEN_146",
+      "customer_message": "@AppleSupport So my apple iD just got hacked and obviously, I got an African mum. Can we sort this before she scroll's down OUR contacts? :/",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.40032659813461396
+    },
+    {
+      "example_id": "GOLDEN_147",
+      "customer_message": "And I turn off wifi and bluetooth in the pull up menu but when I go to settings they\u2019re still on. What is the deal??? @115858 #iphone #iOS11 https\\\\://t.co/ZJnLpeDeLD",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6254153675177482
+    },
+    {
+      "example_id": "GOLDEN_148",
+      "customer_message": "Uh oh I\u2019m having iPhone X issues. Let\u2019s hope you can fix this @115858.",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.641321204343223
+    },
+    {
+      "example_id": "GOLDEN_149",
+      "customer_message": "@115858 needs to fix this \u201cI\ufe0f\u201d issue! \ud83d\ude29\ud83d\ude44",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.9479381262291713
+    },
+    {
+      "example_id": "GOLDEN_150",
+      "customer_message": "Ok seriously wtf is this question mark that\u2019s popping up? @115858 what\u2019s fucking good? \ud83e\udd37\ud83c\udffe\u200d\u2642\ufe0f",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5521621666854457
+    },
+    {
+      "example_id": "GOLDEN_151",
+      "customer_message": "@AppleSupport hi. How can I update MBP 2011 from 10.7.5 to 10.13? For install 10.13 I need 10.8 whats no longer aviable in App Store. Any solution?",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5380771588774106
+    },
+    {
+      "example_id": "GOLDEN_152",
+      "customer_message": "Iphone keeps crashing into a black screen then it resets. It keeps happening every minute or so. Already tried hard reset, analytics and a few other solutions, obviously none worked. Iphone7, up to date. This is really insane! New bug? @AppleSupport https\\\\://t.co/5A77HjHZBY",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3852358151807966
+    },
+    {
+      "example_id": "GOLDEN_153",
+      "customer_message": "@AppleSupport what does this message mean and how do I fix it? :( https\\\\://t.co/GNt1oNBn4R",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.8041211753965672
+    },
+    {
+      "example_id": "GOLDEN_154",
+      "customer_message": "My phone really is a broken piece of crap since the iOS 11 update. Thanks again, @115858 !",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.607983517272833
+    },
+    {
+      "example_id": "GOLDEN_155",
+      "customer_message": "@AppleSupport it is CONSTANTLY freezing https\\\\://t.co/zNouOskak0",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7846190078891225
+    },
+    {
+      "example_id": "GOLDEN_156",
+      "customer_message": "@115858 I swear you\u2019ve intentionally destroyed my iPhone 6 with the latest iOS. A little disappointing after all the money I\u2019ve spent over the years with you....#ripoff #slowmotion",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.35439378190654286
+    },
+    {
+      "example_id": "GOLDEN_157",
+      "customer_message": "Thanks alot for turning my perfectly good iPhone into an unusable piece of crap with your new update @AppleSupport",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5377570328197194
+    },
+    {
+      "example_id": "GOLDEN_158",
+      "customer_message": "What in the actual hell kinda autocorrect is this shit. Gotta be big special @115858 https\\\\://t.co/YXnyctkiZx",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.41389001753892535
+    },
+    {
+      "example_id": "GOLDEN_159",
+      "customer_message": "Seriously contemplating switching to an android. My iPhone is giving me nothing but problems \u2639\ufe0f so unhappy w @115858",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5007868805251392
+    },
+    {
+      "example_id": "GOLDEN_160",
+      "customer_message": "@AppleSupport Is the update servers currently down? All of our devices will download, but can\u2019t verify updates.",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4845880450155831
+    },
+    {
+      "example_id": "GOLDEN_161",
+      "customer_message": ".\\\\@116333 https\\\\://t.co/AmmPU7HzNI Steve would be \ud83d\ude21My iOS still lags and drains battery. Apple is not on the cutting edge anymore. No taste.",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.36806478983060864
+    },
+    {
+      "example_id": "GOLDEN_162",
+      "customer_message": ". @AppleSupport ever since iOS11, messages send slow &amp; photos on iMessage take too long! PLUS my signal strength is SUPER LOW. Thoughts?",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.45283788565751504
+    },
+    {
+      "example_id": "GOLDEN_163",
+      "customer_message": "@115858 your updates have caused a great product to be subpar. It\u2019s slowed my phone down and I have missed photo ops of my 2yr old.:( #slow",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.35499527504726
+    },
+    {
+      "example_id": "GOLDEN_164",
+      "customer_message": "thankful for my broken ass phone. thank you. so much. @115858 #HappyThanksgiving2017",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4682870124038533
+    },
+    {
+      "example_id": "GOLDEN_165",
+      "customer_message": "@AppleSupport How do you disable the \"iTunes has stopped updating...\" podcasts feature in iTunes?",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4849223692295278
+    },
+    {
+      "example_id": "GOLDEN_166",
+      "customer_message": "@AppleSupport what\u2019s this error 9 software issue,@116333 why I\u2019ve to suffer for your software issues https\\\\://t.co/qUu2qkRrAX",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4903016213836405
+    },
+    {
+      "example_id": "GOLDEN_167",
+      "customer_message": "So my Apple Music is not working. Im not able to search for music. I don't pay for things that don't work. What's going? \u00a0@AppleSupport",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4936359946502703
+    },
+    {
+      "example_id": "GOLDEN_168",
+      "customer_message": "fuck @115858 @797 tried updating my stupid phone and its broken, now i have to live off my fucking laptop until they send me a new one im so annoyed",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.40594230105723006
+    },
+    {
+      "example_id": "GOLDEN_169",
+      "customer_message": "@AppleSupport Learned something new at the Apple Store today. We are no longer supposed to swipe up on apps to close them. Can you confirm this and Tweet about it if it's true?",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.36538188144519534
+    },
+    {
+      "example_id": "GOLDEN_170",
+      "customer_message": "@AppleSupport This message pops up randomly.Solution?Disclaimer\\\\\\:I am enrolled for the Beta program.Already on 11.2 https\\\\://t.co/v17DyusFgy",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4369564961829735
+    },
+    {
+      "example_id": "GOLDEN_171",
+      "customer_message": "Hey @115858 I\ufe0f need you to fix I\ufe0f asap! I\ufe0f",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.8937874570943494
+    },
+    {
+      "example_id": "GOLDEN_172",
+      "customer_message": "@AppleSupport what happen to my device I have a Factory Unlock phone and it says \u00a0No Service I have just reset my phone and that just happen https\\\\://t.co/5JgqigGLc8",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.5925651670719372
+    },
+    {
+      "example_id": "GOLDEN_173",
+      "customer_message": "@AppleSupport Why does my iPad keep doing this \ud83d\ude2d https\\\\://t.co/dgTwrAU0Lr",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.8345779619267806
+    },
+    {
+      "example_id": "GOLDEN_174",
+      "customer_message": "Okay @115858 why are you freezing every time I use my phone?",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6199997632504147
+    },
+    {
+      "example_id": "GOLDEN_175",
+      "customer_message": "Copy paste not working on #iPhone6 using #ios11.1 \u00a0@115858 @AppleSupport",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6423934281849681
+    },
+    {
+      "example_id": "GOLDEN_176",
+      "customer_message": "@115858 please fix the issue of \u201cI.T \u201c or acknowledged that there is an issue. \u00a0It\u2019s beyond annoying and frustrating!",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.8096989286204372
+    },
+    {
+      "example_id": "GOLDEN_177",
+      "customer_message": "@AppleSupport @115858 I\u2019ve unchecked Live Photo, yet it keeps defaulting to Live Photo. I want to make Live Photo go away entirely. https\\\\://t.co/63B3p3Ejte",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7007434539540507
+    },
+    {
+      "example_id": "GOLDEN_178",
+      "customer_message": "@115858 @AppleSupport iPad crashes since 11.1.1 update???",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.7226516038616104
+    },
+    {
+      "example_id": "GOLDEN_179",
+      "customer_message": "MY PHONE JYST MADE A WEIRD ASS SQUEAKING NOISE WTF WAS RHAT @115858 FIX YO SHIT",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6074630241855427
+    },
+    {
+      "example_id": "GOLDEN_180",
+      "customer_message": "All 3 @25142 lightning splitters I tried failed immediately. How can @AppleSupport sell defective products like this its stores? #rubbish https\\\\://t.co/yd9EpQWAno",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.32728018090817657
+    },
+    {
+      "example_id": "GOLDEN_181",
+      "customer_message": "@AppleSupport Upgraded to an #iPhone7 &amp; I'm finding that the #iphone6s worked much better. \u00a0I have to restart to get internet connectivity \ud83d\ude15",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.3063812229294062
+    },
+    {
+      "example_id": "GOLDEN_182",
+      "customer_message": "@AppleSupport HELLO my phone has been buggy AF since the new update are you working on getting rid of this? Half the time it literally just doesn\u2019t work \ud83e\udd37\ud83c\udffb\u200d\u2640\ufe0f",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.43959656758200477
+    },
+    {
+      "example_id": "GOLDEN_183",
+      "customer_message": "fix the letter i @AppleSupport",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0
+    },
+    {
+      "example_id": "GOLDEN_184",
+      "customer_message": "I was late to work AGAIN because my alarms never fucking work. @115858 FIX this shit. \ud83d\ude12",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6213778514398742
+    },
+    {
+      "example_id": "GOLDEN_185",
+      "customer_message": "So @AppleSupport , my iPhone goes black, shows spinner. \u00a0GBoard? \u00a0I have crash log. \u00a0Crash has happened for months. \u00a0Send you log?",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.45817487555773906
+    },
+    {
+      "example_id": "GOLDEN_186",
+      "customer_message": "Somebody else\u2019s iphone turns wifi automatically on after the alarm clock goes off in the morning since the stupid update?",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.41324898839385554
+    },
+    {
+      "example_id": "GOLDEN_187",
+      "customer_message": "Dear @115858 \u00a0I love my iPhone &amp; all its features. I think the Hey Siri feature should unlock your phone. Kinda sucks when I\u2019m trying to show off the Hey Siri feature or just use it in general &amp; I still have to touch my phone. Please change. \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 Longtime iPhone Customer.",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.37559246315055
+    },
+    {
+      "example_id": "GOLDEN_188",
+      "customer_message": "Can we get this whole I\ufe0f thing fixed please @115858",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0000000000000002
+    },
+    {
+      "example_id": "GOLDEN_189",
+      "customer_message": "Is this something new @AppleSupport, or should I be able to turn off local backup encryption in #iTunes? https\\\\://t.co/MyPCPhUGdR",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4184610218042224
+    },
+    {
+      "example_id": "GOLDEN_190",
+      "customer_message": "Anyone pleeeease tell me how to take latest iOS update off my phone????\ud83d\ude31\ud83d\ude31\ud83d\ude31 @AppleSupport",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.44324472290503736
+    },
+    {
+      "example_id": "GOLDEN_191",
+      "customer_message": "@AppleSupport is there ever gonna be a fix for the last update that made my iPhone 6 Plus basically useless \u00a0 No im not buying an X or an 8",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.632963141084527
+    },
+    {
+      "example_id": "GOLDEN_192",
+      "customer_message": "Soo that update was supposed to fix my keyboard with the little question mark emoji and i didn\u2019t .... @115858",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.49045382455587316
+    },
+    {
+      "example_id": "GOLDEN_193",
+      "customer_message": "Does @115858 punishes @125607 S8 users by blocking access to @115948 ?! I'm a paying client ! \u00a0Care to comment @AppleSupport ? https\\\\://t.co/r3YxCOu7jg",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.28757881370565
+    },
+    {
+      "example_id": "GOLDEN_194",
+      "customer_message": "Thanks to the many talented iOS app developers who previewed AR features for me this week. Hearing great ideas across Europe! @37390 https\\\\://t.co/rJBgCeGUd9",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.26942807125430696
+    },
+    {
+      "example_id": "GOLDEN_195",
+      "customer_message": "@AppleSupport I got charged for an album I already paid for a long time ago and I\u2019d like a refund please",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.46668321737218965
+    },
+    {
+      "example_id": "GOLDEN_196",
+      "customer_message": "Is it an @ATT issue or an @AppleSupport issue that I must toggle airplane mode several times a day to get LTE to work? Need @125607 ?",
+      "gold_intent": "Services & Account",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.4328623281833863
+    },
+    {
+      "example_id": "GOLDEN_197",
+      "customer_message": "@12228 @115858 @AppleSupport no hab\u00e9is hecho nada bien con el iOS 11, todo son fallos y errores. Arregladlo ya o me paso a @122609",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.2840596492731217
+    },
+    {
+      "example_id": "GOLDEN_198",
+      "customer_message": "What an awful update of iOS @115858 !!! My iphone6 drains the battery like hell now.",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 0.6604701238379429
+    },
+    {
+      "example_id": "GOLDEN_199",
+      "customer_message": "@115858 what the fuck https\\\\://t.co/CFIJR7LvIv",
+      "gold_intent": "General Complaint / Venting (Other)",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0
+    },
+    {
+      "example_id": "GOLDEN_200",
+      "customer_message": "@115858 what is wrong w/ my letter \u201ci\u201d",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Software Bug / Glitch",
+      "decision": "AUTO_HANDLE",
+      "escalation_reason": null,
+      "draft_reply": "This is a mocked safe LLM response based on the evidence.",
+      "top_evidence_sim": 1.0
+    }
+  ]
+}

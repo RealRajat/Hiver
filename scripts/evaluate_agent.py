@@ -4,14 +4,30 @@ from src.evaluation.golden_loader import GoldenSetLoader
 from src.agent.agent import SupportAgent
 from src.evaluation.metrics import calculate_intent_metrics
 from src.agent.models import AgentDecision
+from src.agent.llm_provider import MockLLMProvider
+from src.agent.llm_intent import LLMIntentClassifier
+from src.agent.llm_response import LLMResponseGenerator
+import argparse
 
 def main():
+    parser = argparse.ArgumentParser(description="Evaluate the Agent Pipeline.")
+    parser.add_argument("--mode", type=str, choices=['baseline', 'llm'], default='baseline', help="Evaluation mode.")
+    args = parser.parse_args()
+
     print("Loading Golden Set...")
     loader = GoldenSetLoader()
     dataset = loader.load()
     
-    print("Initializing Agent Pipeline (Intent + Retrieval + Escalation + Generation)...")
-    agent = SupportAgent()
+    print(f"Initializing Agent Pipeline in {args.mode.upper()} mode...")
+    
+    if args.mode == 'llm':
+        provider = MockLLMProvider()
+        agent = SupportAgent(
+            classifier=LLMIntentClassifier(provider),
+            response_generator=LLMResponseGenerator(provider)
+        )
+    else:
+        agent = SupportAgent()
     
     total_queries = len(dataset)
     y_true_intent = []
@@ -117,10 +133,10 @@ def main():
     reports_dir = Path("reports")
     reports_dir.mkdir(exist_ok=True)
     
-    with open(reports_dir / "agent_evaluation.md", "w", encoding="utf-8") as f:
+    with open(reports_dir / f"agent_evaluation_{args.mode}.md", "w", encoding="utf-8") as f:
         f.write("\n".join(md_lines))
         
-    with open(reports_dir / "agent_evaluation.json", "w", encoding="utf-8") as f:
+    with open(reports_dir / f"agent_evaluation_{args.mode}.json", "w", encoding="utf-8") as f:
         json.dump({
             "metrics": {
                 "intent_accuracy": intent_metrics.get('accuracy', 0),
