@@ -201,3 +201,18 @@ Conducted failure analysis exclusively on the Phase 4 deterministic baseline, ma
 
 ### Consequences
 The project is perfectly staged for a real API key. The limitations of deterministic keywords and lexical TF-IDF are mathematically proven and documented, completely justifying the architectural transition to dense embeddings and LLMs in the upcoming weeks.
+
+## Decision: Golden Set Human Annotation Enforcement
+
+### Decision
+AI labels are retained as drafts (`golden_annotation_ai_draft.csv`), but final gold labels require explicit human annotation via an interactive CLI (`scripts/review_golden_set.py`). The data loader dynamically falls back to the AI draft for development but prints a loud warning until the fully human-annotated set is compiled.
+
+### Context
+The Hiver assignment explicitly requires hand-labelled evaluation examples.
+
+### Rationale
+Automatically generated labels cannot legitimately satisfy the human-labeling requirement. Passing off AI drafts as ground truth invalidates the integrity of the evaluation pipeline. A strict review workflow guarantees genuine human validation while preserving the AI drafts for future AI vs Human baseline comparisons.
+
+### Trade-off
+Requires human review time but preserves evaluation integrity.
+

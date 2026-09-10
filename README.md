@@ -24,7 +24,7 @@ A highly actionable, 6-intent taxonomy was formulated:
 6. General Complaint / Venting (Other)
 
 ## 6. Golden Evaluation Set
-A fixed benchmark of 200 examples (`data/evaluation/golden_set_annotated.csv`) was generated to evaluate the pipeline. *Provenance: Initial annotations were AI-drafted and subsequently programmatically corrected; it is not fully human-labelled.*
+A fixed benchmark of 200 examples (`data/evaluation/golden_set_human_review.csv`) has been initialized for human review. *Provenance: Initial annotations were AI-drafted and subsequently programmatically corrected. 200-example evaluation set with AI/programmatic draft labels; genuine human annotation pending.*
 
 ## 7. Baseline
 A minimal deterministic intent classifier achieves 47.50% accuracy on the golden set. It struggles with vocabulary gap and over-defaults to "General Complaint".

@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 from typing import List, Dict, Any
+import warnings
 
 class GoldenSetLoader:
     """
@@ -18,24 +19,32 @@ class GoldenSetLoader:
     
     REQUIRED_COLUMNS = [
         'example_id', 'conversation_id', 'tweet_id', 'customer_message',
-        'optional_context', 'annotation_status', 'intent', 'ambiguity_flag',
+        'optional_context', 'intent', 'ambiguity_flag',
         'annotation_notes', 'annotation_source'
     ]
 
-    def __init__(self, csv_path: str = "data/evaluation/golden_set_annotated.csv"):
+    def __init__(self, csv_path: str = "data/evaluation/golden_set.csv"):
         self.csv_path = Path(csv_path)
 
     def load(self) -> List[Dict[str, Any]]:
         """Loads and strictly validates the golden set."""
-        if not self.csv_path.exists():
-            raise FileNotFoundError(f"Golden set not found at {self.csv_path}")
-            
-        df = pd.read_csv(self.csv_path)
-        self._validate_schema(df)
+        
+        # Determine which file to load
+        actual_path = self.csv_path
+        if not actual_path.exists():
+            draft_path = Path("data/evaluation/golden_annotation_ai_draft.csv")
+            if draft_path.exists():
+                warnings.warn("\n" + "="*80 + "\nWARNING: Loading AI DRAFT labels! Genuine human annotation is PENDING.\n" + "="*80 + "\n")
+                actual_path = draft_path
+            else:
+                raise FileNotFoundError(f"Neither {self.csv_path} nor {draft_path} found.")
+        
+        df = pd.read_csv(actual_path)
+        self._validate_schema(df, is_draft=(actual_path.name == "golden_annotation_ai_draft.csv"))
         
         return df.to_dict(orient='records')
 
-    def _validate_schema(self, df: pd.DataFrame):
+    def _validate_schema(self, df: pd.DataFrame, is_draft: bool):
         # 1. Row count
         if len(df) != 200:
             raise ValueError(f"Golden set must contain exactly 200 examples, found {len(df)}")
@@ -58,6 +67,11 @@ class GoldenSetLoader:
         if df['customer_message'].isna().any() or (df['customer_message'] == "").any():
             raise ValueError("Found missing customer_message values.")
             
-        # 6. Valid ambiguity_flag (must be bool-like)
+        # 6. Valid ambiguity_flag
         if df['ambiguity_flag'].isna().any():
             raise ValueError("Found missing ambiguity_flag values.")
+
+        # 7. Human Annotation Source (only enforce if it's the final set)
+        if not is_draft:
+            if (df['annotation_source'] != 'human').any():
+                raise ValueError("Final golden set contains non-human labels. 'annotation_source' must be 'human'.")

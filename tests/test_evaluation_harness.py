@@ -18,7 +18,7 @@ def test_golden_loader_validates_schema(tmp_path):
         'intent': ["Software Bug / Glitch"]*200,
         'ambiguity_flag': [False]*200,
         'annotation_notes': [""]*200,
-        'annotation_source': ["human_reviewed"]*200
+        'annotation_source': ["human"]*200
     })
     csv_file = tmp_path / "fake_golden.csv"
     df.to_csv(csv_file, index=False)
