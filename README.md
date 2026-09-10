@@ -4,9 +4,36 @@
 This repository implements the Hiver SDE Intern take-home assignment. It will eventually build and evaluate an AI customer-support agent using the **Customer Support on Twitter** dataset.
 
 ## Current Status
-`Phase 4 — Golden Evaluation Set: Annotation In Progress`
+`Phase 4 — Evaluation Harness: COMPLETE`
 
-A manual annotation queue of 200 examples has been prepared for human review. The golden evaluation dataset will not be complete until the human annotator finishes hand-labelling the samples.
+An evaluation harness has been built to benchmark the intent classifier using `data/evaluation/golden_set_annotated.csv`. A simple deterministic baseline classifier has been implemented. (Note: Human/LLM judge agreement for generated replies is not yet implemented).
+
+## Phase 4 — Evaluation Harness
+The evaluation harness (`scripts/evaluate_baseline.py`) measures the performance of a minimal keyword-based deterministic baseline classifier against the golden 200-example dataset.
+- **Metrics**: Accuracy, Macro P/R/F1, Per-intent P/R/F1, and Confusion Matrix.
+- **Ambiguity Handling**: Performance is explicitly reported separately for ambiguous and non-ambiguous examples to provide clarity on model robustness.
+- **Commands**: Run `$env:PYTHONPATH="."; python scripts/evaluate_baseline.py` to reproduce the evaluation and view the reports in the `reports/` directory.
+- **Limitations**: The current baseline is not production-ready. The golden dataset is assumed to be manually annotated, and LLM-as-judge logic for replies remains an interface stub awaiting future implementation. No fabricated human/LLM agreement scores exist.
+
+## Phase 4 — Historical Evidence Retrieval
+A historical evidence retrieval component is built to ground future LLM-drafted responses in actual AppleSupport resolutions, separating retrieval from generation.
+- **Corpus**: `data/processed/applesupport_conversations.jsonl`
+- **Retrieval Unit**: "Resolution Pairs" consisting of the first customer message and the immediate subsequent support response.
+- **Methodology**: Deterministic TF-IDF with Cosine Similarity (Lexical Baseline).
+- **Leakage Prevention**: When querying for an evaluation example, its own `conversation_id` is passed to the `exclude_conversation_ids` parameter, strictly preventing self-retrieval.
+- **Evaluation**: The baseline retrieval is evaluated using the 200 golden examples. A proxy relevance score is calculated based on whether the retrieved evidence yields the same baseline intent as the query. Note: This proxy is *not* a substitute for human relevance judgments.
+- **Reproducibility Command**: Run `$env:PYTHONPATH="."; python scripts/evaluate_retrieval.py` to inspect the retrieval results and metrics in the `reports/` directory.
+
+## Phase 4 — Support Agent Pipeline
+The first end-to-end support agent pipeline is implemented in `src/agent/`.
+- **Architecture**: Orchestrates `BaselineIntentClassifier`, `LexicalRetriever`, `EscalationPolicy`, and `ResponseGenerator`.
+- **Response Strategy**: Deterministic framing of historically retrieved resolutions to ensure grounded, safe answers.
+- **Escalation Policy**: Explicit rules route interactions to `HUMAN_ESCALATION` if evidence similarity is low (<0.15), the intent is ambiguous/unactionable, or if the intent involves sensitive account/billing matters.
+- **Evaluation**: The agent auto-handles ~51.0% of cases and safely escalates ~49.0% on the golden evaluation set.
+- **Commands**:
+  - **Demo**: Run `$env:PYTHONPATH="."; python scripts/run_agent.py --message "My iPhone battery is draining very quickly"`
+  - **Evaluate**: Run `$env:PYTHONPATH="."; python scripts/evaluate_agent.py`
+- **Limitations**: The agent currently uses a deterministic response template rather than an LLM, making responses structurally rigid. Similarity scores are proxies for semantic relevance, and do not represent probabilistic confidence. No genuine LLM or human response evaluations exist yet.
 
 **Selected Support Account**: `AppleSupport`
 

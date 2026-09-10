@@ -45,14 +45,14 @@ The unit of annotation is the **First Customer Message** of a reconstructed conv
 - **Example**: *"Worst update ever, you guys ruined my phone."*
 
 ## Human Annotation Workflow
-1. The human reviewer opens `data/evaluation/golden_annotation_queue.csv`.
-2. For each row where `annotation_status` is `unreviewed`:
+1. The human reviewer opens `data/evaluation/golden_annotation_review_queue.csv`.
+2. For each row:
    - Read the `customer_message`.
-   - Identify the primary intent according to these guidelines.
-   - Enter the intent string exactly into the `intent` column.
-   - If ambiguous, enter `true` in `ambiguity_flag` and provide reasoning in `annotation_notes`.
-   - Update `annotation_status` to `reviewed`.
-3. Save the CSV.
+   - Review the AI-generated `intent` against these guidelines.
+   - If incorrect or missing, update it to the exact correct intent string.
+   - If ambiguous, ensure `true` is in `ambiguity_flag` and provide reasoning in `annotation_notes`.
+   - Once confirmed, update `annotation_source` from `ai_draft` to `human_reviewed`.
+3. Save the CSV and commit it as `data/evaluation/golden_set.csv`.
 
 ## Limitations
-- The 200 items in the annotation queue have NOT been pre-labelled by an AI or heuristic script. They require genuine manual review.
+- The current queue is an `ai_draft`. It must NOT be considered ground truth until explicitly reviewed by a human.

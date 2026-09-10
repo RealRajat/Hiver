@@ -1,0 +1,447 @@
+{
+  "dataset_size": 200,
+  "metrics_overall": {
+    "accuracy": 0.475,
+    "macro_precision": 0.5963042853034225,
+    "macro_recall": 0.4104443144387955,
+    "macro_f1": 0.42232284374821355,
+    "per_intent": {
+      "Device Performance / Hardware": {
+        "precision": 0.8,
+        "recall": 0.5614035087719298,
+        "f1": 0.6597938144329897,
+        "support": 57
+      },
+      "Software Bug / Glitch": {
+        "precision": 0.5409836065573771,
+        "recall": 0.4782608695652174,
+        "f1": 0.5076923076923077,
+        "support": 69
+      },
+      "Services & Account": {
+        "precision": 0.5454545454545454,
+        "recall": 0.4,
+        "f1": 0.46153846153846156,
+        "support": 15
+      },
+      "Purchase & Store Operations": {
+        "precision": 0.45454545454545453,
+        "recall": 0.4166666666666667,
+        "f1": 0.43478260869565216,
+        "support": 12
+      },
+      "How-To / Feature Question": {
+        "precision": 1.0,
+        "recall": 0.07692307692307693,
+        "f1": 0.14285714285714285,
+        "support": 13
+      },
+      "General Complaint / Venting (Other)": {
+        "precision": 0.23684210526315788,
+        "recall": 0.5294117647058824,
+        "f1": 0.32727272727272727,
+        "support": 34
+      }
+    },
+    "confusion_matrix": {
+      "Device Performance / Hardware": {
+        "Device Performance / Hardware": 32,
+        "Software Bug / Glitch": 9,
+        "Services & Account": 1,
+        "Purchase & Store Operations": 0,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 15
+      },
+      "Software Bug / Glitch": {
+        "Device Performance / Hardware": 3,
+        "Software Bug / Glitch": 33,
+        "Services & Account": 2,
+        "Purchase & Store Operations": 0,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 31
+      },
+      "Services & Account": {
+        "Device Performance / Hardware": 0,
+        "Software Bug / Glitch": 2,
+        "Services & Account": 6,
+        "Purchase & Store Operations": 2,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 5
+      },
+      "Purchase & Store Operations": {
+        "Device Performance / Hardware": 2,
+        "Software Bug / Glitch": 0,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 5,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 5
+      },
+      "How-To / Feature Question": {
+        "Device Performance / Hardware": 1,
+        "Software Bug / Glitch": 5,
+        "Services & Account": 2,
+        "Purchase & Store Operations": 2,
+        "How-To / Feature Question": 1,
+        "General Complaint / Venting (Other)": 2
+      },
+      "General Complaint / Venting (Other)": {
+        "Device Performance / Hardware": 2,
+        "Software Bug / Glitch": 12,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 2,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 18
+      }
+    }
+  },
+  "metrics_ambiguous_only": {
+    "accuracy": 0.40625,
+    "macro_precision": 0.17407407407407408,
+    "macro_recall": 0.15760233918128655,
+    "macro_f1": 0.1615990990990991,
+    "per_intent": {
+      "Device Performance / Hardware": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1": 0.25,
+        "support": 5
+      },
+      "Software Bug / Glitch": {
+        "precision": 0.1,
+        "recall": 0.16666666666666666,
+        "f1": 0.125,
+        "support": 6
+      },
+      "Services & Account": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "Purchase & Store Operations": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "How-To / Feature Question": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      },
+      "General Complaint / Venting (Other)": {
+        "precision": 0.6111111111111112,
+        "recall": 0.5789473684210527,
+        "f1": 0.5945945945945946,
+        "support": 19
+      }
+    },
+    "confusion_matrix": {
+      "Device Performance / Hardware": {
+        "Device Performance / Hardware": 1,
+        "Software Bug / Glitch": 1,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 0,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 3
+      },
+      "Software Bug / Glitch": {
+        "Device Performance / Hardware": 1,
+        "Software Bug / Glitch": 1,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 0,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 4
+      },
+      "Services & Account": {
+        "Device Performance / Hardware": 0,
+        "Software Bug / Glitch": 0,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 0,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 0
+      },
+      "Purchase & Store Operations": {
+        "Device Performance / Hardware": 0,
+        "Software Bug / Glitch": 0,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 0,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 0
+      },
+      "How-To / Feature Question": {
+        "Device Performance / Hardware": 1,
+        "Software Bug / Glitch": 1,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 0,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 0
+      },
+      "General Complaint / Venting (Other)": {
+        "Device Performance / Hardware": 0,
+        "Software Bug / Glitch": 7,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 1,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 11
+      }
+    }
+  },
+  "metrics_unambiguous_only": {
+    "accuracy": 0.4880952380952381,
+    "macro_precision": 0.605238836476159,
+    "macro_recall": 0.4130554630554631,
+    "macro_f1": 0.4220940211539111,
+    "per_intent": {
+      "Device Performance / Hardware": {
+        "precision": 0.8378378378378378,
+        "recall": 0.5961538461538461,
+        "f1": 0.6966292134831461,
+        "support": 52
+      },
+      "Software Bug / Glitch": {
+        "precision": 0.6274509803921569,
+        "recall": 0.5079365079365079,
+        "f1": 0.5614035087719298,
+        "support": 63
+      },
+      "Services & Account": {
+        "precision": 0.5454545454545454,
+        "recall": 0.4,
+        "f1": 0.46153846153846156,
+        "support": 15
+      },
+      "Purchase & Store Operations": {
+        "precision": 0.5,
+        "recall": 0.4166666666666667,
+        "f1": 0.45454545454545453,
+        "support": 12
+      },
+      "How-To / Feature Question": {
+        "precision": 1.0,
+        "recall": 0.09090909090909091,
+        "f1": 0.16666666666666666,
+        "support": 11
+      },
+      "General Complaint / Venting (Other)": {
+        "precision": 0.1206896551724138,
+        "recall": 0.4666666666666667,
+        "f1": 0.1917808219178082,
+        "support": 15
+      }
+    },
+    "confusion_matrix": {
+      "Device Performance / Hardware": {
+        "Device Performance / Hardware": 31,
+        "Software Bug / Glitch": 8,
+        "Services & Account": 1,
+        "Purchase & Store Operations": 0,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 12
+      },
+      "Software Bug / Glitch": {
+        "Device Performance / Hardware": 2,
+        "Software Bug / Glitch": 32,
+        "Services & Account": 2,
+        "Purchase & Store Operations": 0,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 27
+      },
+      "Services & Account": {
+        "Device Performance / Hardware": 0,
+        "Software Bug / Glitch": 2,
+        "Services & Account": 6,
+        "Purchase & Store Operations": 2,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 5
+      },
+      "Purchase & Store Operations": {
+        "Device Performance / Hardware": 2,
+        "Software Bug / Glitch": 0,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 5,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 5
+      },
+      "How-To / Feature Question": {
+        "Device Performance / Hardware": 0,
+        "Software Bug / Glitch": 4,
+        "Services & Account": 2,
+        "Purchase & Store Operations": 2,
+        "How-To / Feature Question": 1,
+        "General Complaint / Venting (Other)": 2
+      },
+      "General Complaint / Venting (Other)": {
+        "Device Performance / Hardware": 2,
+        "Software Bug / Glitch": 5,
+        "Services & Account": 0,
+        "Purchase & Store Operations": 1,
+        "How-To / Feature Question": 0,
+        "General Complaint / Venting (Other)": 7
+      }
+    }
+  },
+  "representative_errors": [
+    {
+      "example_id": "GOLDEN_002",
+      "customer_message": "@AppleSupport you seem to be skipping the step that allows to select which carrier phone to get for iPhone X upgrade head start. Why?",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_003",
+      "customer_message": "Bruhhhh I\u2019m so fuckin tired @AppleSupport @115858 fixed these damn glitches ! Keep cutting my phone off",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": true,
+      "annotation_notes": "Multiple device symptoms plus frustration; primary action is device troubleshooting."
+    },
+    {
+      "example_id": "GOLDEN_004",
+      "customer_message": "What is this \u201cA\u201d and \u00a0QUESTION MARK THAT MY PHONE KEEPS DOING!! @115858 @AppleSupport",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_006",
+      "customer_message": "WHY IS THE LETTER I SHOWING UP AS A QUESTION MARK IN A BOX ? @115858 FIX IT",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_007",
+      "customer_message": "@AppleSupport trying to setup HomeKit automation for when multiple people leave home but it says to upgrade my hub -an Apple TV w tvOS 11.1 https\\\\://t.co/IXpgmAi9vc",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_008",
+      "customer_message": "Love how my $1200 @115858 iPhone X constantly freezes when using apps like YouTube and Apple Music. Wtf",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_010",
+      "customer_message": "@AppleSupport with iOS11 my phone won\u2019t show my music on my lock screen and when I receive calls I can\u2019t hear anything on the other end help",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Device Performance / Hardware",
+      "ambiguity_flag": true,
+      "annotation_notes": "Two distinct post-update failures (music/phone calls); primary intent requires judgment."
+    },
+    {
+      "example_id": "GOLDEN_011",
+      "customer_message": "@AppleSupport \u00a0I updated to iOS 11.0.3 on my 6s plus &amp; I just went from 85% to 13% in an hour after watching two YouTube videos. :/",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_014",
+      "customer_message": "@AppleSupport Any idea when the @ATT activation servers will stop shitting themselves, or do I keep mashing Try Again &amp; hope? #iphoneXlaunch",
+      "gold_intent": "Purchase & Store Operations",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_015",
+      "customer_message": "Theres isnt a day where @115948 dont kill me with frustration! Cant do the simplest things like.. play music! Without skipping tracks!",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": true,
+      "annotation_notes": "\"Music playback failure is specific"
+    },
+    {
+      "example_id": "GOLDEN_016",
+      "customer_message": "@AppleSupport is it just me, or are there issues with iTunes the last few days? \u00a0Mine keeps freezing up... \u00a0No update available.",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "Services & Account",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_018",
+      "customer_message": "I want ios 10 back on my device how can i get that plz help me @115858 the Battery life is worse than i expected i m using 6s",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Device Performance / Hardware",
+      "ambiguity_flag": true,
+      "annotation_notes": "\"Primarily asks how to downgrade iOS"
+    },
+    {
+      "example_id": "GOLDEN_019",
+      "customer_message": "@AppleSupport literally cannot figure out how to delete a movie off my phone for the life of me since the new update.",
+      "gold_intent": "How-To / Feature Question",
+      "predicted_intent": "Software Bug / Glitch",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_021",
+      "customer_message": "I upgraded my phone to iOS11. I had 3GB of storage free. Business as usual and now I am out of storage space. What gives? @AppleSupport",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": true,
+      "annotation_notes": "Storage loss after update could be software behavior or storage management; needs human review."
+    },
+    {
+      "example_id": "GOLDEN_022",
+      "customer_message": "@AppleSupport um hi my iphone SE keeps restarting. It's been doing it all day and I have no idea why. Can you provide any advice? Thanks.",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_025",
+      "customer_message": "@AppleSupport y\u2019all got me fucked up my X be blacking out and hanging up calls on FaceTime out of no where",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_026",
+      "customer_message": "@AppleSupport what's happening to my computer? https\\\\://t.co/HoqpCrRejO",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": true,
+      "annotation_notes": "Message is too vague and relies on an attached image/context not present here."
+    },
+    {
+      "example_id": "GOLDEN_031",
+      "customer_message": "I updated my phone &amp; I'm still seeing ? boxes @AppleSupport https\\\\://t.co/MFe5qaGuVT",
+      "gold_intent": "Software Bug / Glitch",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_034",
+      "customer_message": "thanks for the new iphone update @115858 my fav feature is how my phone freezes up on me like five times a day",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "Software Bug / Glitch",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    },
+    {
+      "example_id": "GOLDEN_035",
+      "customer_message": "@115858 @AppleSupport My new #iPhoneX shows a green line on it\u2019s display just on it\u2019s third day! HELP OUT https\\\\://t.co/cTtbFTyaaX",
+      "gold_intent": "Device Performance / Hardware",
+      "predicted_intent": "General Complaint / Venting (Other)",
+      "ambiguity_flag": false,
+      "annotation_notes": NaN
+    }
+  ]
+}

@@ -8,9 +8,9 @@
 - **Final Sample Size**: 200 examples placed in the queue.
 
 ## Annotation Workflow
-The 200 examples have been exported to `data/evaluation/golden_annotation_queue.csv` for manual human review.
-- **Automated Labels**: Discarded. No LLM or heuristic was used to generate intent labels.
-- **Status**: Currently pending human annotation.
+The 200 examples were initially labeled using an AI drafting process (`golden_annotation_ai_draft.csv`). Because the dataset must be human-labelled ground truth, the AI-generated labels were programmatically reviewed and placed into `data/evaluation/golden_annotation_review_queue.csv` with the explicit `annotation_source = ai_draft` marker.
+- **Automated Labels**: Pre-populated by an AI tool for review.
+- **Status**: Currently pending human approval. The labels cannot be considered ground truth until explicitly reviewed and marked `human_reviewed`.
 
 ## Intent Distribution
 *(Pending human annotation)*
