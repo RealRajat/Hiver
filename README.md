@@ -4,9 +4,9 @@
 This repository implements the Hiver SDE Intern take-home assignment. It will eventually build and evaluate an AI customer-support agent using the **Customer Support on Twitter** dataset.
 
 ## Current Status
-`Phase 2 — Brand Selected`
+`Phase 4 — Golden Evaluation Set: Annotation In Progress`
 
-The initial data ingestion and schema validation layer is implemented, and the brands within the TWCS dataset have been profiled. We have finalized the brand selection for the subsequent AI agent workflow.
+A manual annotation queue of 200 examples has been prepared for human review. The golden evaluation dataset will not be complete until the human annotator finishes hand-labelling the samples.
 
 **Selected Support Account**: `AppleSupport`
 
@@ -64,14 +64,19 @@ To generate profiling metrics and candidate comparisons for all support accounts
 python scripts/profile_brands.py --data-path data/raw/twcs.csv --output-dir reports
 ```
 
+## Run Phase 3: Conversation Reconstruction
+To extract all chronological conversations for the selected brand into a JSONL corpus:
+```bash
+python scripts/reconstruct_conversations.py --brand AppleSupport
+```
+*(The generated corpus `data/processed/applesupport_conversations.jsonl` is excluded from Git due to its size.)*
+
 ## Limitations / Next Phase
 The project does not yet:
-- select the final brand;
-- reconstruct complete conversations;
 - define intents;
 - train models;
 - generate replies;
 - implement escalation;
 - evaluate the final agent.
 
-The next phase is **Phase 2, Step 3: Final Brand Selection**.
+The next phase will involve intent discovery based on the reconstructed conversations.

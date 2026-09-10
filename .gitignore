@@ -1,6 +1,6 @@
 # Data
 data/raw/
-data/processed/
+data/processed/*.jsonl
 
 # Python
 __pycache__/
