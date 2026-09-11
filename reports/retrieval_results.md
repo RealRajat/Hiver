@@ -4,16 +4,18 @@
 
 - **Retriever**: Deterministic TF-IDF + Cosine Similarity (Baseline)
 - **Leakage Prevention**: Exclusion by `conversation_id` enforced during search.
-- **Proxy Relevance Metric**: Percentage of queries where at least one retrieved result's customer message yields the same baseline-classified intent as the gold query. *(Note: This is a proxy measurement, not a genuine human relevance judgment.)*
-
-## Detailed Inspections
+- **Proxy Relevance Metric (Top-1)**: Percentage of queries where the *first* retrieved result yields the same baseline-classified intent.
+- **Proxy Relevance Metric (Top-K)**: Percentage of queries where *at least one* of the top 5 results yields the same baseline-classified intent. *(Note: This is a proxy measurement, not a genuine human relevance judgment.)*
 
 ## Summary Metrics
 
 - **Queries Processed**: 200
 - **Queries with ≥1 Result**: 200 (100.0%)
 - **Average Top-K Similarity**: 0.4961
-- **Proxy Relevance Hit Rate**: 69.0%
+- **Top-1 Proxy Intent Hit Rate**: 36.0%
+- **Top-K (5) Proxy Intent Hit Rate**: 69.0%
+
+## Detailed Inspections
 
 Showing retrieval inspections for the first 20 examples:
 
@@ -138,7 +140,7 @@ Showing retrieval inspections for the first 20 examples:
 
 
 ### Query: GOLDEN_007
-**Customer Message**: @AppleSupport trying to setup HomeKit automation for when multiple people leave home but it says to upgrade my hub -an Apple TV w tvOS 11.1 https\\://t.co/IXpgmAi9vc
+**Customer Message**: @AppleSupport trying to setup HomeKit automation for when multiple people leave home but it says to upgrade my hub -an Apple TV w tvOS 11.1 https\://t.co/IXpgmAi9vc
 **Gold Intent**: How-To / Feature Question
   - **Result 1** (Sim: 0.525, Proxy Intent: Software Bug / Glitch)
     - Issue: Which home hub do i have to update? 🤔 @AppleSupport #HomeKit https://t.co/bHSGrpyiHb
@@ -178,7 +180,7 @@ Showing retrieval inspections for the first 20 examples:
 
 
 ### Query: GOLDEN_009
-**Customer Message**: Aye @115858 y’all are gonna need to send another update. Every time I️ type an “I️” it ends up looking like this 😒 https\\://t.co/zqG2JxPR3V
+**Customer Message**: Aye @115858 y’all are gonna need to send another update. Every time I️ type an “I️” it ends up looking like this 😒 https\://t.co/zqG2JxPR3V
 **Gold Intent**: Software Bug / Glitch
   - **Result 1** (Sim: 0.519, Proxy Intent: General Complaint / Venting (Other))
     - Issue: How come every time I type “it” it ends up being”I.T “ ? @AppleSupport
@@ -338,7 +340,7 @@ Showing retrieval inspections for the first 20 examples:
 
 
 ### Query: GOLDEN_017
-**Customer Message**: @AppleSupport what password is this referring to? It will not accept my iCloud, computer, or phone password https\\://t.co/tcZVKRuynn
+**Customer Message**: @AppleSupport what password is this referring to? It will not accept my iCloud, computer, or phone password https\://t.co/tcZVKRuynn
 **Gold Intent**: Services & Account
   - **Result 1** (Sim: 0.692, Proxy Intent: Services & Account)
     - Issue: When @115858 makes you change your computer password, but then won't accept your computer password, and then requires that password it won't accept to CHANGE your password. #wtf

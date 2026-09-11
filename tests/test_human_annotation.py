@@ -53,5 +53,5 @@ def test_final_golden_set_validation(tmp_path):
     df.to_csv(final_path, index=False)
     
     loader = GoldenSetLoader(csv_path=str(final_path))
-    with pytest.raises(ValueError, match="must be 'human'"):
+    with pytest.raises(ValueError, match="Found invalid annotation sources. Must be one of .*"):
         loader.load()

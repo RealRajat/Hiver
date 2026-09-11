@@ -100,7 +100,7 @@ def main():
         f"- **Macro F1**: {intent_metrics.get('macro_f1', 0):.4f}\n",
         "## Retrieval Metrics",
         f"- **Coverage**: {retrieval_coverage*100:.1f}%",
-        f"- **Proxy Intent Hit Rate**: {proxy_hit_rate*100:.1f}%\n",
+        f"- **Top-1 Proxy Intent Hit Rate**: {proxy_hit_rate*100:.1f}%\n",
         "## Pipeline Metrics",
         f"- **Auto-Handle Rate**: {auto_handle_rate*100:.1f}% ({auto_handle_count})",
         f"- **Escalation Rate**: {escalation_rate*100:.1f}% ({escalation_count})\n"
@@ -142,7 +142,7 @@ def main():
                 "intent_accuracy": intent_metrics.get('accuracy', 0),
                 "intent_macro_f1": intent_metrics.get('macro_f1', 0),
                 "retrieval_coverage": retrieval_coverage,
-                "proxy_hit_rate": proxy_hit_rate,
+                "proxy_top1_hit_rate": proxy_hit_rate,
                 "auto_handle_rate": auto_handle_rate,
                 "escalation_rate": escalation_rate
             },

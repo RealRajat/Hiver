@@ -4,11 +4,11 @@
 
 ## Intent Metrics
 - **Accuracy**: 0.4750
-- **Macro F1**: 0.4223
+- **Macro F1**: 0.4214
 
 ## Retrieval Metrics
 - **Coverage**: 100.0%
-- **Proxy Intent Hit Rate**: 36.0%
+- **Top-1 Proxy Intent Hit Rate**: 36.0%
 
 ## Pipeline Metrics
 - **Auto-Handle Rate**: 51.0% (102)
@@ -26,7 +26,7 @@
 "@454673 We'd like to hear more about what's going on. Please DM us about this issue and we'll continue there. https://t.co/GDrqU22YpT"
 
 **ID**: GOLDEN_009
-- **Message**: Aye @115858 y’all are gonna need to send another update. Every time I️ type an “I️” it ends up looking like this 😒 https\\://t.co/zqG2JxPR3V
+- **Message**: Aye @115858 y’all are gonna need to send another update. Every time I️ type an “I️” it ends up looking like this 😒 https\://t.co/zqG2JxPR3V
 - **Intent**: Software Bug / Glitch
 - **Draft**: Based on historical cases with similar Software Bug / Glitch issues, Apple Support typically advises:
 

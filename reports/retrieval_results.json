@@ -3,7 +3,8 @@
     "total_queries": 200,
     "coverage_pct": 1.0,
     "avg_top_k_similarity": 0.49608765895437207,
-    "proxy_relevance_hit_rate": 0.69
+    "proxy_top1_hit_rate": 0.36,
+    "proxy_topk_hit_rate": 0.69
   },
   "inspections": [
     {
@@ -326,7 +327,7 @@
     },
     {
       "example_id": "GOLDEN_007",
-      "customer_message": "@AppleSupport trying to setup HomeKit automation for when multiple people leave home but it says to upgrade my hub -an Apple TV w tvOS 11.1 https\\\\://t.co/IXpgmAi9vc",
+      "customer_message": "@AppleSupport trying to setup HomeKit automation for when multiple people leave home but it says to upgrade my hub -an Apple TV w tvOS 11.1 https\\://t.co/IXpgmAi9vc",
       "gold_intent": "How-To / Feature Question",
       "results_found": 5,
       "results": [
@@ -432,7 +433,7 @@
     },
     {
       "example_id": "GOLDEN_009",
-      "customer_message": "Aye @115858 y\u2019all are gonna need to send another update. Every time I\ufe0f type an \u201cI\ufe0f\u201d it ends up looking like this \ud83d\ude12 https\\\\://t.co/zqG2JxPR3V",
+      "customer_message": "Aye @115858 y\u2019all are gonna need to send another update. Every time I\ufe0f type an \u201cI\ufe0f\u201d it ends up looking like this \ud83d\ude12 https\\://t.co/zqG2JxPR3V",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -856,7 +857,7 @@
     },
     {
       "example_id": "GOLDEN_017",
-      "customer_message": "@AppleSupport what password is this referring to? It will not accept my iCloud, computer, or phone password https\\\\://t.co/tcZVKRuynn",
+      "customer_message": "@AppleSupport what password is this referring to? It will not accept my iCloud, computer, or phone password https\\://t.co/tcZVKRuynn",
       "gold_intent": "Services & Account",
       "results_found": 5,
       "results": [
@@ -1174,7 +1175,7 @@
     },
     {
       "example_id": "GOLDEN_023",
-      "customer_message": "@AppleSupport why do my notifications not have a complete background? Just updated last night but happening since new iOS. https\\\\://t.co/yiLJ9Hh8US",
+      "customer_message": "@AppleSupport why do my notifications not have a complete background? Just updated last night but happening since new iOS. https\\://t.co/yiLJ9Hh8US",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -1333,7 +1334,7 @@
     },
     {
       "example_id": "GOLDEN_026",
-      "customer_message": "@AppleSupport what's happening to my computer? https\\\\://t.co/HoqpCrRejO",
+      "customer_message": "@AppleSupport what's happening to my computer? https\\://t.co/HoqpCrRejO",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -1439,7 +1440,7 @@
     },
     {
       "example_id": "GOLDEN_028",
-      "customer_message": "Hey @AppleSupport is this a known bug that will be fixed soon? My dock on iPad continues to not stay centered and only a reboot will reset it. \u00a0See attached picture. https\\\\://t.co/d0U1mmK6C1",
+      "customer_message": "Hey @AppleSupport is this a known bug that will be fixed soon? My dock on iPad continues to not stay centered and only a reboot will reset it. \u00a0See attached picture. https\\://t.co/d0U1mmK6C1",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -1492,7 +1493,7 @@
     },
     {
       "example_id": "GOLDEN_029",
-      "customer_message": "Yo @AppleSupport can you make this shit stop, please. https\\\\://t.co/s9ZyLpqJg5",
+      "customer_message": "Yo @AppleSupport can you make this shit stop, please. https\\://t.co/s9ZyLpqJg5",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -1598,7 +1599,7 @@
     },
     {
       "example_id": "GOLDEN_031",
-      "customer_message": "I updated my phone &amp; I'm still seeing ? boxes @AppleSupport https\\\\://t.co/MFe5qaGuVT",
+      "customer_message": "I updated my phone &amp; I'm still seeing ? boxes @AppleSupport https\\://t.co/MFe5qaGuVT",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -1810,7 +1811,7 @@
     },
     {
       "example_id": "GOLDEN_035",
-      "customer_message": "@115858 @AppleSupport My new #iPhoneX shows a green line on it\u2019s display just on it\u2019s third day! HELP OUT https\\\\://t.co/cTtbFTyaaX",
+      "customer_message": "@115858 @AppleSupport My new #iPhoneX shows a green line on it\u2019s display just on it\u2019s third day! HELP OUT https\\://t.co/cTtbFTyaaX",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -2022,7 +2023,7 @@
     },
     {
       "example_id": "GOLDEN_039",
-      "customer_message": "@115858 you\u2019re not about to make me \u00a0 switch to iPhone 8. Better fix this glitch. You all aren\u2019t slick. https\\\\://t.co/lJkkeNSr3M",
+      "customer_message": "@115858 you\u2019re not about to make me \u00a0 switch to iPhone 8. Better fix this glitch. You all aren\u2019t slick. https\\://t.co/lJkkeNSr3M",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -2181,7 +2182,7 @@
     },
     {
       "example_id": "GOLDEN_042",
-      "customer_message": "@AppleSupport my iPad Air 2 battery meter seems to be glitchy. Says I have low power &amp; when I plug it in jumps up by anything up to 20%. Sometimes it goes from 20% to 5% in second or like now on 3% for well over an hour of use including on YouTube. Software or hardware issue? https\\\\://t.co/iRaPBgK7Ha",
+      "customer_message": "@AppleSupport my iPad Air 2 battery meter seems to be glitchy. Says I have low power &amp; when I plug it in jumps up by anything up to 20%. Sometimes it goes from 20% to 5% in second or like now on 3% for well over an hour of use including on YouTube. Software or hardware issue? https\\://t.co/iRaPBgK7Ha",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -2234,7 +2235,7 @@
     },
     {
       "example_id": "GOLDEN_043",
-      "customer_message": "@AppleSupport fix this. i can\u2019t handle this anarchy anymore. https\\\\://t.co/2wMm0ZGCTd",
+      "customer_message": "@AppleSupport fix this. i can\u2019t handle this anarchy anymore. https\\://t.co/2wMm0ZGCTd",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -2393,7 +2394,7 @@
     },
     {
       "example_id": "GOLDEN_046",
-      "customer_message": "@115858 you're really making it hard to not switch to #Android with your poorly tested iOS updates #voluntaryrestart #\ud83e\udd2c https\\\\://t.co/0K4jpbJJp1",
+      "customer_message": "@115858 you're really making it hard to not switch to #Android with your poorly tested iOS updates #voluntaryrestart #\ud83e\udd2c https\\://t.co/0K4jpbJJp1",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -2658,7 +2659,7 @@
     },
     {
       "example_id": "GOLDEN_051",
-      "customer_message": "@AppleSupport want to explain how with half an hour after being on 100% I\u2019m now on less than half that? #ios11 #iPhoneUpdate https\\\\://t.co/fNYqEWuL76",
+      "customer_message": "@AppleSupport want to explain how with half an hour after being on 100% I\u2019m now on less than half that? #ios11 #iPhoneUpdate https\\://t.co/fNYqEWuL76",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -3082,7 +3083,7 @@
     },
     {
       "example_id": "GOLDEN_059",
-      "customer_message": "@115858 help! https\\\\://t.co/X1GpgTQk8p",
+      "customer_message": "@115858 help! https\\://t.co/X1GpgTQk8p",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -3347,7 +3348,7 @@
     },
     {
       "example_id": "GOLDEN_064",
-      "customer_message": "After updating to #ios11, I accidentally changed wallpaper. While trying to set the original back (see image), it has disappeared suddenly. Where do I find the beautiful wallpapers of ios 10? @AppleSupport https\\\\://t.co/zPKsqH5bWz",
+      "customer_message": "After updating to #ios11, I accidentally changed wallpaper. While trying to set the original back (see image), it has disappeared suddenly. Where do I find the beautiful wallpapers of ios 10? @AppleSupport https\\://t.co/zPKsqH5bWz",
       "gold_intent": "How-To / Feature Question",
       "results_found": 5,
       "results": [
@@ -3771,7 +3772,7 @@
     },
     {
       "example_id": "GOLDEN_072",
-      "customer_message": "@AppleSupport Has using an \u2018 always caused the character limit in a text message to drop from 160 to 70? Or is that a bug? ;\\\\\\~;",
+      "customer_message": "@AppleSupport Has using an \u2018 always caused the character limit in a text message to drop from 160 to 70? Or is that a bug? ;\\\\~;",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -3877,7 +3878,7 @@
     },
     {
       "example_id": "GOLDEN_074",
-      "customer_message": "@115858 New #iPhoneX #iOS 11.1 #Bug: Screen flickers in Mail App - probably software bug. @175600 @138069 @176071 @244902 @24575 https\\\\://t.co/f0DivXcTCj",
+      "customer_message": "@115858 New #iPhoneX #iOS 11.1 #Bug: Screen flickers in Mail App - probably software bug. @175600 @138069 @176071 @244902 @24575 https\\://t.co/f0DivXcTCj",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -3930,7 +3931,7 @@
     },
     {
       "example_id": "GOLDEN_075",
-      "customer_message": "@AppleSupport My Guest Account is still appearing even \u00a0though it is turned off in Users &amp; Groups. https\\\\://t.co/IO8o1sx5w8",
+      "customer_message": "@AppleSupport My Guest Account is still appearing even \u00a0though it is turned off in Users &amp; Groups. https\\://t.co/IO8o1sx5w8",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -3983,7 +3984,7 @@
     },
     {
       "example_id": "GOLDEN_076",
-      "customer_message": "Seriously wtf @AppleSupport https\\\\://t.co/2PXGjBhJ4K",
+      "customer_message": "Seriously wtf @AppleSupport https\\://t.co/2PXGjBhJ4K",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -4089,7 +4090,7 @@
     },
     {
       "example_id": "GOLDEN_078",
-      "customer_message": ".\\\\@115858 your earpods are poppin' in my ear \ud83d\ude24\ud83d\ude35\ud83d\ude30\ud83e\udd14",
+      "customer_message": ".\\@115858 your earpods are poppin' in my ear \ud83d\ude24\ud83d\ude35\ud83d\ude30\ud83e\udd14",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -4248,7 +4249,7 @@
     },
     {
       "example_id": "GOLDEN_081",
-      "customer_message": "@AppleSupport any idea why the numerical display doesn\u2019t match the hour hand? https\\\\://t.co/RhM5plFK2A",
+      "customer_message": "@AppleSupport any idea why the numerical display doesn\u2019t match the hour hand? https\\://t.co/RhM5plFK2A",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -4354,7 +4355,7 @@
     },
     {
       "example_id": "GOLDEN_083",
-      "customer_message": "@AppleSupport i got my reservation number but https\\\\://t.co/jUaGGTUlU2 keeps on saying cant find reservation. Whats the deal??! \u00a0 \u00a0 \u00a0 iphonex",
+      "customer_message": "@AppleSupport i got my reservation number but https\\://t.co/jUaGGTUlU2 keeps on saying cant find reservation. Whats the deal??! \u00a0 \u00a0 \u00a0 iphonex",
       "gold_intent": "Purchase & Store Operations",
       "results_found": 5,
       "results": [
@@ -4778,7 +4779,7 @@
     },
     {
       "example_id": "GOLDEN_091",
-      "customer_message": "Hey @115858 \u00a0 Whatever infected update you sent out just so we would all go buy a new iPhone is really pissing me off. Stop your bullshit. This is all that happens now. From the MOMENT I updated my goddamn phone. https\\\\://t.co/OaJs5CoQoq",
+      "customer_message": "Hey @115858 \u00a0 Whatever infected update you sent out just so we would all go buy a new iPhone is really pissing me off. Stop your bullshit. This is all that happens now. From the MOMENT I updated my goddamn phone. https\\://t.co/OaJs5CoQoq",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -4831,7 +4832,7 @@
     },
     {
       "example_id": "GOLDEN_092",
-      "customer_message": "@AppleSupport explain this https\\\\://t.co/l3d7kWscKw",
+      "customer_message": "@AppleSupport explain this https\\://t.co/l3d7kWscKw",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -4884,7 +4885,7 @@
     },
     {
       "example_id": "GOLDEN_093",
-      "customer_message": "@115858 uhm your latest Update on iPhone (for me a 6) seriously sucks ass!! My phone is slow, doesnt react, eats the battery \ud83d\ude12 https\\\\://t.co/KxRY3LeS39",
+      "customer_message": "@115858 uhm your latest Update on iPhone (for me a 6) seriously sucks ass!! My phone is slow, doesnt react, eats the battery \ud83d\ude12 https\\://t.co/KxRY3LeS39",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -5414,7 +5415,7 @@
     },
     {
       "example_id": "GOLDEN_103",
-      "customer_message": "@AppleSupport PLEASE FIX THIS ANNOYING ASS GLITCH!! https\\\\://t.co/yctquiqRYI",
+      "customer_message": "@AppleSupport PLEASE FIX THIS ANNOYING ASS GLITCH!! https\\://t.co/yctquiqRYI",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -5838,7 +5839,7 @@
     },
     {
       "example_id": "GOLDEN_111",
-      "customer_message": "Thank you! @35066 @116333 https\\\\://t.co/Je053NGwvC",
+      "customer_message": "Thank you! @35066 @116333 https\\://t.co/Je053NGwvC",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -5891,7 +5892,7 @@
     },
     {
       "example_id": "GOLDEN_112",
-      "customer_message": "@AppleSupport my phone seems to get more and More messed up. Not only is address book synch a drama, now text even getting worse than it was... https\\\\://t.co/8IOSl27SUm",
+      "customer_message": "@AppleSupport my phone seems to get more and More messed up. Not only is address book synch a drama, now text even getting worse than it was... https\\://t.co/8IOSl27SUm",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -6050,7 +6051,7 @@
     },
     {
       "example_id": "GOLDEN_115",
-      "customer_message": "@AppleSupport hi my laptop has been doing this for over 12 hours and i can\u2019t shut it down or anything, any suggestions ? https\\\\://t.co/X8Aq8qgLWm",
+      "customer_message": "@AppleSupport hi my laptop has been doing this for over 12 hours and i can\u2019t shut it down or anything, any suggestions ? https\\://t.co/X8Aq8qgLWm",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -6527,7 +6528,7 @@
     },
     {
       "example_id": "GOLDEN_124",
-      "customer_message": "Hey @AppleSupport ... Why is \"System\" taking up over 50gb of my hard disk space? Surely MacOS isn't that big? https\\\\://t.co/UbTJbdeoRm",
+      "customer_message": "Hey @AppleSupport ... Why is \"System\" taking up over 50gb of my hard disk space? Surely MacOS isn't that big? https\\://t.co/UbTJbdeoRm",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -6686,7 +6687,7 @@
     },
     {
       "example_id": "GOLDEN_127",
-      "customer_message": "\u0645\u0634\u0643\u0644\u0629 \u0627\u0644\u0628\u0637\u0627\u0631\u064a\u0629 \u0641\u064a #ios11 \u0645\u0633\u062a\u0645\u0631\u0629 \u0648\u0627\u0644\u0622\u0646 \u0648\u0635\u0644\u062a \u0627\u0644\u0649 iphone 8 plus \u0645\u0639 \u0627\u0644\u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0623\u062e\u064a\u0631 11.0.2 !! \u00a0https\\\\://t.co/eVoFgOeN2B @AppleSupport #WTF",
+      "customer_message": "\u0645\u0634\u0643\u0644\u0629 \u0627\u0644\u0628\u0637\u0627\u0631\u064a\u0629 \u0641\u064a #ios11 \u0645\u0633\u062a\u0645\u0631\u0629 \u0648\u0627\u0644\u0622\u0646 \u0648\u0635\u0644\u062a \u0627\u0644\u0649 iphone 8 plus \u0645\u0639 \u0627\u0644\u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0623\u062e\u064a\u0631 11.0.2 !! \u00a0https\\://t.co/eVoFgOeN2B @AppleSupport #WTF",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -6739,7 +6740,7 @@
     },
     {
       "example_id": "GOLDEN_128",
-      "customer_message": "\u0668 \u0634\u0647\u0648\u0631 \u0648\u0644\u0633\u0627 \u0628\u0635\u0645\u0647 \u0627\u064a\u062f\u0643 \u0639\u0644\u064a \u0645\u0648\u0628\u0627\u064a\u0644\u064a\ud83d\ude42. https\\\\://t.co/VWGqTZn7R9",
+      "customer_message": "\u0668 \u0634\u0647\u0648\u0631 \u0648\u0644\u0633\u0627 \u0628\u0635\u0645\u0647 \u0627\u064a\u062f\u0643 \u0639\u0644\u064a \u0645\u0648\u0628\u0627\u064a\u0644\u064a\ud83d\ude42. https\\://t.co/VWGqTZn7R9",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -6845,7 +6846,7 @@
     },
     {
       "example_id": "GOLDEN_130",
-      "customer_message": "Why is this always happening @115858 #iphonex https\\\\://t.co/ddCQXId5U4",
+      "customer_message": "Why is this always happening @115858 #iphonex https\\://t.co/ddCQXId5U4",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -7110,7 +7111,7 @@
     },
     {
       "example_id": "GOLDEN_135",
-      "customer_message": "hi, If you dont have the ability and quality of developing ios so please don't do it!! None of my photos or videos that I took with last version are not loading clarity. \u00a0The phone crashes at least 2 times every day. This is unbearable @AppleSupport https\\\\://t.co/3uClpasA2L",
+      "customer_message": "hi, If you dont have the ability and quality of developing ios so please don't do it!! None of my photos or videos that I took with last version are not loading clarity. \u00a0The phone crashes at least 2 times every day. This is unbearable @AppleSupport https\\://t.co/3uClpasA2L",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -7375,7 +7376,7 @@
     },
     {
       "example_id": "GOLDEN_140",
-      "customer_message": "@AppleSupport when I turn off airplane mode , suddenly WiFi and Bluetooth turn on. https\\\\://t.co/ajymNO2gjW",
+      "customer_message": "@AppleSupport when I turn off airplane mode , suddenly WiFi and Bluetooth turn on. https\\://t.co/ajymNO2gjW",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -7746,7 +7747,7 @@
     },
     {
       "example_id": "GOLDEN_147",
-      "customer_message": "And I turn off wifi and bluetooth in the pull up menu but when I go to settings they\u2019re still on. What is the deal??? @115858 #iphone #iOS11 https\\\\://t.co/ZJnLpeDeLD",
+      "customer_message": "And I turn off wifi and bluetooth in the pull up menu but when I go to settings they\u2019re still on. What is the deal??? @115858 #iphone #iOS11 https\\://t.co/ZJnLpeDeLD",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -8011,7 +8012,7 @@
     },
     {
       "example_id": "GOLDEN_152",
-      "customer_message": "Iphone keeps crashing into a black screen then it resets. It keeps happening every minute or so. Already tried hard reset, analytics and a few other solutions, obviously none worked. Iphone7, up to date. This is really insane! New bug? @AppleSupport https\\\\://t.co/5A77HjHZBY",
+      "customer_message": "Iphone keeps crashing into a black screen then it resets. It keeps happening every minute or so. Already tried hard reset, analytics and a few other solutions, obviously none worked. Iphone7, up to date. This is really insane! New bug? @AppleSupport https\\://t.co/5A77HjHZBY",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -8064,7 +8065,7 @@
     },
     {
       "example_id": "GOLDEN_153",
-      "customer_message": "@AppleSupport what does this message mean and how do I fix it? :( https\\\\://t.co/GNt1oNBn4R",
+      "customer_message": "@AppleSupport what does this message mean and how do I fix it? :( https\\://t.co/GNt1oNBn4R",
       "gold_intent": "How-To / Feature Question",
       "results_found": 5,
       "results": [
@@ -8170,7 +8171,7 @@
     },
     {
       "example_id": "GOLDEN_155",
-      "customer_message": "@AppleSupport it is CONSTANTLY freezing https\\\\://t.co/zNouOskak0",
+      "customer_message": "@AppleSupport it is CONSTANTLY freezing https\\://t.co/zNouOskak0",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -8329,7 +8330,7 @@
     },
     {
       "example_id": "GOLDEN_158",
-      "customer_message": "What in the actual hell kinda autocorrect is this shit. Gotta be big special @115858 https\\\\://t.co/YXnyctkiZx",
+      "customer_message": "What in the actual hell kinda autocorrect is this shit. Gotta be big special @115858 https\\://t.co/YXnyctkiZx",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -8488,7 +8489,7 @@
     },
     {
       "example_id": "GOLDEN_161",
-      "customer_message": ".\\\\@116333 https\\\\://t.co/AmmPU7HzNI Steve would be \ud83d\ude21My iOS still lags and drains battery. Apple is not on the cutting edge anymore. No taste.",
+      "customer_message": ".\\@116333 https\\://t.co/AmmPU7HzNI Steve would be \ud83d\ude21My iOS still lags and drains battery. Apple is not on the cutting edge anymore. No taste.",
       "gold_intent": "Device Performance / Hardware",
       "results_found": 5,
       "results": [
@@ -8753,7 +8754,7 @@
     },
     {
       "example_id": "GOLDEN_166",
-      "customer_message": "@AppleSupport what\u2019s this error 9 software issue,@116333 why I\u2019ve to suffer for your software issues https\\\\://t.co/qUu2qkRrAX",
+      "customer_message": "@AppleSupport what\u2019s this error 9 software issue,@116333 why I\u2019ve to suffer for your software issues https\\://t.co/qUu2qkRrAX",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -8965,7 +8966,7 @@
     },
     {
       "example_id": "GOLDEN_170",
-      "customer_message": "@AppleSupport This message pops up randomly.Solution?Disclaimer\\\\\\:I am enrolled for the Beta program.Already on 11.2 https\\\\://t.co/v17DyusFgy",
+      "customer_message": "@AppleSupport This message pops up randomly.Solution?Disclaimer\\:I am enrolled for the Beta program.Already on 11.2 https\\://t.co/v17DyusFgy",
       "gold_intent": "Software Bug / Glitch",
       "results_found": 5,
       "results": [
@@ -9071,7 +9072,7 @@
     },
     {
       "example_id": "GOLDEN_172",
-      "customer_message": "@AppleSupport what happen to my device I have a Factory Unlock phone and it says \u00a0No Service I have just reset my phone and that just happen https\\\\://t.co/5JgqigGLc8",
+      "customer_message": "@AppleSupport what happen to my device I have a Factory Unlock phone and it says \u00a0No Service I have just reset my phone and that just happen https\\://t.co/5JgqigGLc8",
       "gold_intent": "Services & Account",
       "results_found": 5,
       "results": [
@@ -9124,7 +9125,7 @@
     },
     {
       "example_id": "GOLDEN_173",
-      "customer_message": "@AppleSupport Why does my iPad keep doing this \ud83d\ude2d https\\\\://t.co/dgTwrAU0Lr",
+      "customer_message": "@AppleSupport Why does my iPad keep doing this \ud83d\ude2d https\\://t.co/dgTwrAU0Lr",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -9336,8 +9337,8 @@
     },
     {
       "example_id": "GOLDEN_177",
-      "customer_message": "@AppleSupport @115858 I\u2019ve unchecked Live Photo, yet it keeps defaulting to Live Photo. I want to make Live Photo go away entirely. https\\\\://t.co/63B3p3Ejte",
-      "gold_intent": "Software Bug / Glitch",
+      "customer_message": "@AppleSupport @115858 I\u2019ve unchecked Live Photo, yet it keeps defaulting to Live Photo. I want to make Live Photo go away entirely. https\\://t.co/63B3p3Ejte",
+      "gold_intent": "How-To / Feature Question",
       "results_found": 5,
       "results": [
         {
@@ -9495,7 +9496,7 @@
     },
     {
       "example_id": "GOLDEN_180",
-      "customer_message": "All 3 @25142 lightning splitters I tried failed immediately. How can @AppleSupport sell defective products like this its stores? #rubbish https\\\\://t.co/yd9EpQWAno",
+      "customer_message": "All 3 @25142 lightning splitters I tried failed immediately. How can @AppleSupport sell defective products like this its stores? #rubbish https\\://t.co/yd9EpQWAno",
       "gold_intent": "Purchase & Store Operations",
       "results_found": 5,
       "results": [
@@ -9972,7 +9973,7 @@
     },
     {
       "example_id": "GOLDEN_189",
-      "customer_message": "Is this something new @AppleSupport, or should I be able to turn off local backup encryption in #iTunes? https\\\\://t.co/MyPCPhUGdR",
+      "customer_message": "Is this something new @AppleSupport, or should I be able to turn off local backup encryption in #iTunes? https\\://t.co/MyPCPhUGdR",
       "gold_intent": "How-To / Feature Question",
       "results_found": 5,
       "results": [
@@ -10184,7 +10185,7 @@
     },
     {
       "example_id": "GOLDEN_193",
-      "customer_message": "Does @115858 punishes @125607 S8 users by blocking access to @115948 ?! I'm a paying client ! \u00a0Care to comment @AppleSupport ? https\\\\://t.co/r3YxCOu7jg",
+      "customer_message": "Does @115858 punishes @125607 S8 users by blocking access to @115948 ?! I'm a paying client ! \u00a0Care to comment @AppleSupport ? https\\://t.co/r3YxCOu7jg",
       "gold_intent": "Services & Account",
       "results_found": 5,
       "results": [
@@ -10237,7 +10238,7 @@
     },
     {
       "example_id": "GOLDEN_194",
-      "customer_message": "Thanks to the many talented iOS app developers who previewed AR features for me this week. Hearing great ideas across Europe! @37390 https\\\\://t.co/rJBgCeGUd9",
+      "customer_message": "Thanks to the many talented iOS app developers who previewed AR features for me this week. Hearing great ideas across Europe! @37390 https\\://t.co/rJBgCeGUd9",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [
@@ -10502,7 +10503,7 @@
     },
     {
       "example_id": "GOLDEN_199",
-      "customer_message": "@115858 what the fuck https\\\\://t.co/CFIJR7LvIv",
+      "customer_message": "@115858 what the fuck https\\://t.co/CFIJR7LvIv",
       "gold_intent": "General Complaint / Venting (Other)",
       "results_found": 5,
       "results": [

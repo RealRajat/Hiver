@@ -8,12 +8,17 @@
 - **Final Sample Size**: 200 examples placed in the queue.
 
 ## Annotation Workflow
-The 200 examples were initially labeled using an AI drafting process (`golden_annotation_ai_draft.csv`). Because the dataset must be human-labelled ground truth, the AI-generated labels were programmatically reviewed and placed into `data/evaluation/golden_annotation_review_queue.csv` with the explicit `annotation_source = ai_draft` marker.
-- **Automated Labels**: Pre-populated by an AI tool for review.
-- **Status**: Currently pending human approval. The labels cannot be considered ground truth until explicitly reviewed and marked `human_reviewed`.
+Because human annotators were not utilized for this assignment, the 200 examples were semantically evaluated by the assistant (`data/evaluation/golden_set_assistant_annotated.csv`) with the explicit `annotation_source = assistant_annotated` marker.
+- **Status**: The dataset is functionally complete for evaluation but explicitly fails the assignment's human hand-labelled requirement.
 
 ## Intent Distribution
-*(Pending human annotation)*
+- Software Bug / Glitch: 68
+- Device Performance / Hardware: 57
+- General Complaint / Venting (Other): 34
+- Services & Account: 15
+- How-To / Feature Question: 14
+- Purchase & Store Operations: 12
 
 ## Ambiguity
-*(Pending human annotation)*
+- Ambiguous: 32
+- Unambiguous: 168

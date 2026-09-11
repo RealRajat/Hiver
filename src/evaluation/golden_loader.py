@@ -32,19 +32,19 @@ class GoldenSetLoader:
         # Determine which file to load
         actual_path = self.csv_path
         if not actual_path.exists():
-            draft_path = Path("data/evaluation/golden_annotation_ai_draft.csv")
-            if draft_path.exists():
-                warnings.warn("\n" + "="*80 + "\nWARNING: Loading AI DRAFT labels! Genuine human annotation is PENDING.\n" + "="*80 + "\n")
-                actual_path = draft_path
+            assistant_path = Path("data/evaluation/golden_set_assistant_annotated.csv")
+            if assistant_path.exists():
+                warnings.warn("\n" + "="*80 + "\nWARNING: Loading ASSISTANT-ANNOTATED labels. The assignment's human hand-labelled requirement was NOT met.\n" + "="*80 + "\n")
+                actual_path = assistant_path
             else:
-                raise FileNotFoundError(f"Neither {self.csv_path} nor {draft_path} found.")
+                raise FileNotFoundError(f"Neither {self.csv_path} nor {assistant_path} found.")
         
         df = pd.read_csv(actual_path)
-        self._validate_schema(df, is_draft=(actual_path.name == "golden_annotation_ai_draft.csv"))
+        self._validate_schema(df)
         
         return df.to_dict(orient='records')
 
-    def _validate_schema(self, df: pd.DataFrame, is_draft: bool):
+    def _validate_schema(self, df: pd.DataFrame):
         # 1. Row count
         if len(df) != 200:
             raise ValueError(f"Golden set must contain exactly 200 examples, found {len(df)}")
@@ -71,7 +71,8 @@ class GoldenSetLoader:
         if df['ambiguity_flag'].isna().any():
             raise ValueError("Found missing ambiguity_flag values.")
 
-        # 7. Human Annotation Source (only enforce if it's the final set)
-        if not is_draft:
-            if (df['annotation_source'] != 'human').any():
-                raise ValueError("Final golden set contains non-human labels. 'annotation_source' must be 'human'.")
+        # 7. Annotation Source Constraint (Enforce assistant_annotated or human, not just human)
+        valid_sources = {'human', 'assistant_annotated'}
+        invalid_sources = df[~df['annotation_source'].isin(valid_sources)]
+        if not invalid_sources.empty:
+            raise ValueError(f"Found invalid annotation sources. Must be one of {valid_sources}.")

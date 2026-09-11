@@ -17,7 +17,8 @@ def main():
     total_queries = len(dataset)
     queries_with_results = 0
     all_top_k_similarities = []
-    proxy_relevance_hits = 0
+    proxy_relevance_top1_hits = 0
+    proxy_relevance_topk_hits = 0
     
     reports_dir = Path("reports")
     reports_dir.mkdir(exist_ok=True)
@@ -29,7 +30,8 @@ def main():
     md_lines.append("## Methodology\n")
     md_lines.append("- **Retriever**: Deterministic TF-IDF + Cosine Similarity (Baseline)")
     md_lines.append("- **Leakage Prevention**: Exclusion by `conversation_id` enforced during search.")
-    md_lines.append("- **Proxy Relevance Metric**: Percentage of queries where at least one retrieved result's customer message yields the same baseline-classified intent as the gold query. *(Note: This is a proxy measurement, not a genuine human relevance judgment.)*\n")
+    md_lines.append("- **Proxy Relevance Metric (Top-1)**: Percentage of queries where the *first* retrieved result yields the same baseline-classified intent.")
+    md_lines.append("- **Proxy Relevance Metric (Top-K)**: Percentage of queries where *at least one* of the top 5 results yields the same baseline-classified intent. *(Note: This is a proxy measurement, not a genuine human relevance judgment.)*\n")
     
     md_lines.append("## Detailed Inspections\n")
     md_lines.append("Showing retrieval inspections for the first 20 examples:\n")
@@ -49,14 +51,19 @@ def main():
             
             # Proxy relevance: does any retrieved result match the gold intent?
             has_proxy_match = False
-            for r in results:
+            top1_match = False
+            for idx, r in enumerate(results):
                 pred_intent = classifier.predict(r['customer_message'])
                 r['proxy_intent'] = pred_intent
                 if pred_intent == gold_intent:
                     has_proxy_match = True
+                    if idx == 0:
+                        top1_match = True
                     
             if has_proxy_match:
-                proxy_relevance_hits += 1
+                proxy_relevance_topk_hits += 1
+            if top1_match:
+                proxy_relevance_top1_hits += 1
         else:
             avg_sim = 0.0
             
@@ -86,7 +93,8 @@ def main():
     # Calculate stats
     coverage = queries_with_results / total_queries
     avg_top_k_sim = statistics.mean(all_top_k_similarities) if all_top_k_similarities else 0.0
-    proxy_relevance_pct = proxy_relevance_hits / total_queries
+    proxy_top1_pct = proxy_relevance_top1_hits / total_queries
+    proxy_topk_pct = proxy_relevance_topk_hits / total_queries
     
     # Prepend stats
     stats_lines = [
@@ -94,7 +102,8 @@ def main():
         f"- **Queries Processed**: {total_queries}",
         f"- **Queries with ≥1 Result**: {queries_with_results} ({coverage*100:.1f}%)",
         f"- **Average Top-K Similarity**: {avg_top_k_sim:.4f}",
-        f"- **Proxy Relevance Hit Rate**: {proxy_relevance_pct*100:.1f}%\n"
+        f"- **Top-1 Proxy Intent Hit Rate**: {proxy_top1_pct*100:.1f}%",
+        f"- **Top-K (5) Proxy Intent Hit Rate**: {proxy_topk_pct*100:.1f}%\n"
     ]
     md_lines = md_lines[:6] + stats_lines + md_lines[6:]
     
@@ -107,7 +116,8 @@ def main():
                 "total_queries": total_queries,
                 "coverage_pct": coverage,
                 "avg_top_k_similarity": avg_top_k_sim,
-                "proxy_relevance_hit_rate": proxy_relevance_pct
+                "proxy_top1_hit_rate": proxy_top1_pct,
+                "proxy_topk_hit_rate": proxy_topk_pct
             },
             "inspections": results_output
         }, f, indent=2)

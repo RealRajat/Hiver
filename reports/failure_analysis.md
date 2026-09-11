@@ -2,61 +2,56 @@
 
 ## 1. Evaluation Context
 The following failure analysis is based on the **Deterministic Baseline Pipeline** running on the 200-example golden evaluation set. 
+
 > [!WARNING]
-> **Real LLM Evaluation is PENDING PROVIDER CREDENTIALS.** No real LLM evaluation or generated responses exist. The analysis of intent, retrieval, and escalation relies entirely on the deterministic baseline, as explicitly requested, to prevent data fabrication.
+> **Real LLM Evaluation is PENDING PROVIDER CREDENTIALS.** No real LLM evaluation or generated responses exist. The analysis relies entirely on the deterministic baseline, as explicitly requested, to prevent data fabrication.
 
-## 2. Intent Failures
-The deterministic zero-shot classifier achieved **47.50% accuracy** (Macro F1: 42.23%). The most common failure patterns are over-classifying specific issues into the generic fallback category.
+## 2. Top 5 Failure Modes
 
-### Most Confused Intent Pairs
-1. **True:** `Software Bug / Glitch` | **Pred:** `General Complaint / Venting (Other)` (31 occurrences)
-2. **True:** `Device Performance / Hardware` | **Pred:** `General Complaint / Venting (Other)` (15 occurrences)
-3. **True:** `General Complaint / Venting (Other)` | **Pred:** `Software Bug / Glitch` (12 occurrences)
+### Failure Mode 1: Vocabulary Gap & Emotional Intent Confusion
+- **Real Example**: `GOLDEN_003` - "Bruhhhh I’m so fuckin tired @AppleSupport @115858 fixed these damn glitches ! Keep cutting my phone off"
+- **Expected Behavior**: Classify as `Device Performance / Hardware` or `Software Bug`.
+- **Actual Behavior**: Classified as `General Complaint / Venting (Other)`.
+- **Why the System Failed**: The keyword classifier heavily penalizes emotional language and lacks the semantic depth to map "cutting my phone off" to a device performance issue, defaulting to generic venting.
+- **Hypothesis for Improvement**: An LLM classifier can look past the expletives and identify the underlying technical issue ("cutting off" = power/performance failure).
 
-### Analysis
-- **Observed Fact**: The classifier heavily over-indexes on `General Complaint / Venting` when faced with vocabulary it does not explicitly recognize.
-- **Inference**: The deterministic baseline lacks the semantic understanding to map specific technical complaints (e.g., "my keyboard autocorrect is broken") to "Software Bug" without explicit keyword matches, thus defaulting to generic venting.
+### Failure Mode 2: Lexical Retrieval Mismatch (The Proxy Hit Rate Gap)
+- **Real Example**: `GOLDEN_007` - "@AppleSupport trying to setup HomeKit automation for when multiple people leave home but it says to upgrade my hub -an Apple TV w tvOS 11.1"
+- **Expected Behavior**: Retrieve a historical "How-To" resolution regarding HomeKit hub requirements.
+- **Actual Behavior**: Retrieved an irrelevant bug report regarding tvOS beta versions (Proxy intent: `Software Bug / Glitch`).
+- **Why the System Failed**: TF-IDF (lexical matching) overly indexed on "tvOS 11.1" and "upgrade", pulling documents with those exact tokens regardless of the semantic intent (HomeKit setup).
+- **Hypothesis for Improvement**: Transitioning to dense semantic embeddings (`all-MiniLM-L6-v2`) will allow the retriever to match the *meaning* of the query rather than raw token overlap.
 
-## 3. Retrieval Failures
-The lexical TF-IDF retriever achieved **100% coverage** but only a **69.0% Proxy Same-Intent Hit Rate**.
+### Failure Mode 3: Overly Blunt Escalation Policy
+- **Real Example**: `GOLDEN_004` - "What is this “A” and  QUESTION MARK THAT MY PHONE KEEPS DOING!! @115858 @AppleSupport"
+- **Expected Behavior**: Auto-handle with the known iOS 11.1 autocorrect bug workaround.
+- **Actual Behavior**: Escalated to a human agent unconditionally.
+- **Why the System Failed**: Because the query was misclassified as `General Complaint / Venting` (due to all-caps and lack of the word "bug"), it triggered a hardcoded safety rule that escalates all venting to human agents.
+- **Hypothesis for Improvement**: Calibrate the escalation logic to use LLM assessment rather than hardcoded intent-blocks. If an LLM detects a resolvable question within the venting, it should draft a reply.
 
-### Analysis
-- **Observed Fact**: 31% of the time, the top retrieved historical conversation does not even share the same intent as the customer's query.
-- **Inference**: TF-IDF relies purely on exact lexical overlap. A customer asking "how to wipe my phone" and a historical resolution for "factory resetting a device" share very few words, causing the retriever to fail to find the semantically correct evidence.
+### Failure Mode 4: Context-Dependent Keyword Ambiguity
+- **Real Example**: `GOLDEN_002` - "@AppleSupport you seem to be skipping the step that allows to select which carrier phone to get for iPhone X upgrade head start. Why?"
+- **Expected Behavior**: Classify as `Purchase & Store Operations`.
+- **Actual Behavior**: Classified as `General Complaint / Venting (Other)`.
+- **Why the System Failed**: The word "upgrade" is highly ambiguous. It frequently refers to "iOS software upgrade" (Bug/Glitch) but here refers to the "iPhone Upgrade Program" (Purchase). The keyword system cannot contextualize the noun phrase.
+- **Hypothesis for Improvement**: Generative LLMs inherently process attention across the entire sentence, easily disambiguating "carrier phone to get" as a purchase operation.
 
-## 4. Response Failures
-> [!IMPORTANT]
-> **RESPONSE FAILURE ANALYSIS PENDING.** 
-> Because real LLM API credentials are not available, we have not genuinely generated draft replies. Consequently, we cannot systematically analyze hallucinations, unsupported claims, or excessive verbosity yet.
+### Failure Mode 5: Blind Evidence Concatenation (Template Brittleness)
+- **Real Example**: When retrieval similarity is marginally above the escalation threshold (e.g., 0.20) but the proxy intent is wrong.
+- **Expected Behavior**: The agent recognizes the retrieved evidence does not actually answer the question and escalates.
+- **Actual Behavior**: The deterministic response generator blindly pastes the irrelevant resolution into the hardcoded template (`"Apple Support typically advises: [Irrelevant Evidence]"`).
+- **Why the System Failed**: The deterministic agent lacks a "reading comprehension" step. It assumes retrieval success implies relevance.
+- **Hypothesis for Improvement**: The `LLMResponseGenerator` prompts the model to read the evidence first. If the evidence cannot answer the question, the LLM is instructed to output an escalation request rather than hallucinate a connection.
 
-## 5. Escalation Failures
-The pipeline currently enforces a strict deterministic escalation policy, resulting in a **49.0% Escalation Rate**.
-
-### Breakdown by Predicted Intent
-- **General Complaint / Venting (Other)**: 76 cases escalated.
-- **Purchase & Store Operations**: 11 cases escalated.
-- **Services & Account**: 11 cases escalated.
-
-### Analysis
-- **Observed Fact**: All 98 escalations were triggered perfectly in accordance with the hardcoded policy (which escalates these three intents unconditionally to protect sensitive accounts and avoid aggravating angry customers).
-- **Inference**: While safe, escalating 100% of "General Complaint" interactions prevents the agent from handling easily resolvable issues simply because the customer sounded frustrated.
-
-## 6. Misleading Headline Number
+## 3. Misleading Headline Number
 **"100% Retrieval Coverage"**
 
-1. **Why the number looks good**: It suggests the agent has perfect knowledge and always successfully finds historical precedent to answer the customer's question.
-2. **What it actually measures**: It merely measures that the TF-IDF search function did not crash and successfully returned the top-scoring document from the corpus, regardless of how low the similarity score was.
-3. **What it fails to measure**: It completely fails to measure *relevance*.
-4. **Why it is misleading**: A reviewer might interpret this as end-to-end retrieval success, but the Proxy Hit Rate (69%) proves that nearly a third of these "successfully retrieved" documents are completely irrelevant to the customer's actual intent. Grounding an LLM on irrelevant evidence guarantees hallucinations or useless replies.
+- **Why it looks good**: It suggests the agent never fails to find historical precedent to answer the customer's question.
+- **What it actually measures**: It merely measures that the TF-IDF search function did not crash and successfully returned the top-scoring document from the corpus, regardless of similarity.
+- **Why it is misleading**: A reviewer might interpret this as end-to-end retrieval success. However, the Proxy Hit Rate proves that the retrieved context fails to even match the customer's intent 64% of the time (Top-1 Proxy = 36%). Grounding an LLM on irrelevant evidence guarantees hallucinations. 
 
-## 7. Key Lessons
-1. **Lexical matching is insufficient**: TF-IDF cannot bridge the vocabulary gap between customer phrasing and support phrasing.
-2. **Deterministic intent fails gracefully but inaccurately**: Keyword-based classification defaults to "Venting" too often, severely limiting auto-handle opportunities.
-3. **Escalation policy is too blunt**: Blanket-escalating entire intents is safe but scales poorly.
-
-## 8. Next-Week Plan
-1. **(High Priority) Integrate Real LLM Provider**: Supply API credentials to unblock the `LLMIntentClassifier` and `LLMResponseGenerator` to establish the true LLM baseline.
-2. **(High Priority) Implement Semantic/Embedding Retrieval**: Replace the TF-IDF retriever with a dense embedding model (e.g., `all-MiniLM-L6-v2`) to capture semantic meaning rather than exact word matches, directly addressing the 31% proxy miss rate.
-3. **(Medium Priority) Calibrate Escalation Thresholds**: Instead of blanket-escalating "General Complaints", use the LLM to assess if the venting contains a resolvable technical question, allowing us to safely auto-handle more cases.
-4. **(Medium Priority) Collect Genuine Human Judgments**: Source human annotators to grade the 30 sampled examples using the schema defined in Phase 6, unlocking our LLM-as-Judge agreement metrics.
-5. **(Low Priority) Adversarial Edge-Case Testing**: Once the real LLM is wired, inject adversarial customer messages to test the bounds of the "Groundedness" prompt instructions.
+## 4. Next-Week Plan
+1. **(High Priority) Integrate Real LLM Provider**: Supply API credentials to unblock the `LLMIntentClassifier` and `LLMResponseGenerator`.
+2. **(High Priority) Implement Semantic/Embedding Retrieval**: Replace the TF-IDF retriever with dense embeddings to directly address Failure Mode 2.
+3. **(Medium Priority) Calibrate Escalation Thresholds**: Address Failure Mode 3 by replacing rigid blocks with LLM routing.
+4. **(Medium Priority) Collect Genuine Human Judgments**: Address the human-label limitation by sourcing human annotators to label the 200 evaluation examples and 30 sampled replies.
